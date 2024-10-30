@@ -1,0 +1,124 @@
+<html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿QUIÉNES SOMOS?</title>
+    <link rel="icon" href="/LOGO-IMG/MENTA.png" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="stylesquienessomos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <button class="hamburger" aria-label="Toggle Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-left">
+                <li><a href="/CATEGORIAS/catdama.html">DAMA</a></li>
+                <li><a href="/CATEGORIAS/catcaballero.html">CABALLERO</a></li>
+                <li><a href="/CATEGORIAS/cataccesorios.html">ACCESORIOS</a></li>
+                <li><a href="/CATEGORIAS/catmaquillaje.html">MAQUILLAJE</a></li>
+            </ul>
+            <div class="logo">
+                <a href="/PAGINA-PRINCIPAL/pagina-principal.html"><img src="/LOGO-IMG/NEGRO.png" alt="Logo"></a>
+            </div>
+            <div class="flex">
+                <a href="https://www.instagram.com/sandunga2121/"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@sandunga.21?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
+                <a href="https://wa.me/5585705008"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=61563504766735"><i class="fab fa-facebook"></i></a>
+            </div>
+        </nav>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container flex">
+        <div class="main-content">
+
+            <h1 class="title">QUIÉNES SOMOS</h1>
+
+            <p class="paragraph">
+                En nuestro negocio, nos esforzamos por ofrecer productos de calidad a precios accesibles, 
+                asegurando que más personas puedan beneficiarse de nuestras ofertas. Nos caracteriza la 
+                excelencia, la innovación y el compromiso con la variedad, lo que nos permite ser reconocidos 
+                como una opción confiable para quienes buscan lo mejor al mejor precio. Queremos llegar a cada 
+                vez más lugares, compartiendo nuestra pasión por brindar productos accesibles y de alta calidad.
+            </p>
+
+            <h1 class="title">OTROS CATÁLOGOS QUE OFRECEMOS</h1>
+
+            <div class="productos-grid">
+                <div class="catalogo">
+                    <a href="https://www.ilusion.com/">
+                        <img src="ilusion.png" alt="Ilusion">
+                    </a>
+                </div>
+                <div class="catalogo">
+                    <a href="https://cklass.com/pages/liquidacion-total-calzado">
+                        <img src="cklass.png" alt="Cklass">
+                    </a>
+                </div>
+                <div class="catalogo">
+                    <a href="https://www.priceshoes.com/catalogos">
+                        <img src="ps.jpeg" alt="Price Shoes">
+                    </a>
+                </div>
+                <div class="catalogo">
+                    <a href="https://www.vickyform.com/364?map=productClusterIds">
+                        <img src="vff.png" alt="Vicky Form">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pie de pagina: Aqui empieza... -->
+    <footer class="footer">
+        <div class="container grid">
+            <!-- Left Column: Links -->
+            <div>
+                <ul class="space-y-4">
+                    <li><a href="/QUIENES-SOMOS/quienes-somos.html">¿Quiénes somos?</a></li>
+                </ul>
+                <div class="mt-10 text-sm text-gray-600">
+                    <p><i class="fas fa-globe"></i> MX/ES</p>
+                    <p>Sandunga 2024 / Todos los Derechos Reservados</p>
+                </div>
+            </div>
+            <!-- Middle Column: Contact Info -->
+            <div>
+                <ul class="space-y-4">
+                    <li>Contactos:</li>
+                    <li>55-8570-5008</li>
+                    <li>sandunga.galvan.21@gmail.com</li>
+                    <li>Heroes De Tizayuca 12va</li>
+                    <li>Felipe Ángeles</li>
+                </ul>
+            </div>
+            <!-- Social Media Links in Footer -->
+            <div class="w-full bg-gray-200 py-4">
+                <div class="container flex justify-center">
+                    <a href="https://www.instagram.com/sandunga2121/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@sandunga.21?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/5585705008"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61563504766735"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Pie de pagina: Aqui acaba... -->
+    <!-- Agreguen esto igual, ya que esto hace responsiva la pagina tambien -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLeft = document.querySelector('.nav-left');
+
+        hamburger.addEventListener('click', () => {
+            navLeft.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

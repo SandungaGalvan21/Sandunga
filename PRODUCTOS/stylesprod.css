@@ -1,0 +1,417 @@
+body {
+    background-color: white;
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Encabezado: aqui empieza... */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #E5E7EB;
+    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: white;
+    box-sizing: border-box;
+}
+
+/* Botón de menú hamburguesa */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    left: 0; /* Ajuste automático para la posición */
+}
+
+/* Enlaces de la barra de navegación (lado izquierdo) */
+nav .nav-left {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    transition: max-height 0.3s ease;
+}
+
+nav .nav-left li a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+nav .nav-left li a:hover {
+    color: #00ffff;
+}
+
+/* Logo */
+nav .logo {
+    text-align: center;
+    flex: 1;
+}
+
+nav .logo img {
+    max-width: 30px;
+    height: auto;
+}
+
+/* Redes sociales (lado derecho) */
+nav .flex {
+    display: flex;
+    gap: 5rem;
+    justify-content: flex-end;
+}
+
+nav .flex a {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: black;
+}
+
+nav .flex a:hover {
+    color: #00ffff;
+}
+
+/* Contenido */
+.product-grid {
+    padding: 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 32px;
+    text-align: center;
+    margin-top: 30px; /* Asegurar que el título esté debajo del header */
+}
+
+/* Grid y tarjetas de producto */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Mantiene la adaptabilidad */
+    justify-items: center; /* Centra los elementos dentro de la rejilla */
+}
+
+.product-card {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid #eeeeee; /* Borde gris */
+    box-shadow: 0 4px 8px #0000001a; /* Sombra */
+}
+
+.product-image {
+    width: 100%;
+    object-fit: cover; /* Para asegurar que la imagen se ajuste sin distorsiones */
+    display: block; /* Elimina cualquier espacio blanco extraño */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+.new-badge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: green;
+    color: white;
+    font-size: 0.75rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-name {
+    color: #4A4A4A;
+    margin: 0;
+}
+
+.product-price {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.product-color {
+    color: #A0A0A0;
+}
+
+.product-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+
+/* Pie de pagina: aqui empieza... */
+.footer {
+    background-color: #e5e7eb;
+    padding: 16px 0;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
+    box-sizing: border-box;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.space-y-4 {
+    list-style-type: none;
+    padding: 0;
+}
+
+.space-y-4 li {
+    font-size: 18px;
+    color: #4a5568;
+    text-align: center;
+}
+
+.space-y-4 li a {
+    text-decoration: none;
+    color: #4a5568;
+    transition: color 0.3s ease;
+}
+  
+.space-y-4 li a:hover {
+    color: #00ffff;
+}
+
+.flex.justify-center {
+    display: column;
+    justify-content: center;
+    gap: 24px;
+}
+
+.flex.justify-center a {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+    transition: color 0.2s ease-in-out;
+}
+
+.flex.justify-center a:hover {
+    color: #00ffff;
+}
+/* Pie de pagina: aqui termina... */
+
+/* Media Queries para pantallas responsivas */
+/* Estilos para pantallas pequeñas (Apple Watch y celulares) */
+@media (max-width: 430px) {
+
+    /* Encabezado: aqui empieza... */
+    nav .nav-left {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        border: 1px solid #E5E7EB;
+        z-index: 1000;
+    }
+
+    nav .nav-left.active {
+        display: flex;
+    }
+
+    nav .flex {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    .hamburger {
+        display: block;
+        order: -2;
+    }
+
+    .logo {
+        order: -1;
+    }
+    /* Encabezado: aqui termina... */
+
+    .product-grid {
+        padding: 0rem;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 16px;
+    }
+
+    .product-card {
+        width: 100%;
+    
+    }
+
+    .title {
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 60px; /* Asegurar que el título esté debajo del header */
+    }
+
+    /* Pie de pagina: aqui empieza... */
+    .footer {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    .container {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0 1rem;
+    }
+
+    .space-y-4 li {
+        font-size: 16px;
+        word-wrap: break-word;
+    }
+
+    .flex.justify-center {
+        display: flex;
+        gap: 2rem;
+        justify-content: flex-end;
+        }
+
+    .flex.justify-center a {
+        font-size: 1.2rem;
+    }
+    /* Pie de pagina: aqui termina.. */
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 884px) {
+    /* Encabezado: aqui empieza... */
+    nav .nav-left {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding: 1rem;
+        border: 1px solid #E5E7EB;
+        z-index: 1000;
+    }
+
+    nav .nav-left.active {
+        display: flex;
+    }
+
+    nav .flex {
+        display: flex;
+        gap: 1rem;
+        justify-content: flex-end;
+    }
+
+    .hamburger {
+        display: block;
+        order: -2;
+    }
+
+    .logo {
+        order: -1;
+    }
+    /* Encabezado: aqui termina... */
+
+    .product-grid {
+        padding: 1rem;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(1, 1fr); /* Mostrar dos productos por fila */
+        gap: 20px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .title {
+        margin-top: 60px; /* Asegurar que el título esté debajo del header */
+    }
+
+    /* Pie de pagina: aqui empieza... */
+    .footer .container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); /* Dos columnas en tablets */
+        gap: 20px;
+        justify-items: center;
+        padding: 0 1rem;
+    }
+
+    .container {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0 1rem;
+    }
+
+    .space-y-4 li {
+        font-size: 16px;
+        word-wrap: break-word;
+    }
+
+    .flex.justify-center {
+        display: flex;
+        gap: 2rem;
+        justify-content: flex-end;
+        }
+
+    .flex.justify-center a {
+        font-size: 1.2rem;
+    }
+    /* Pie de pagina: aqui termina.. */
+}
+
+/* Laptops y televisión */
+@media (min-width: 885px) {
+    .flex.justify-center {
+        display: flex;
+        gap: 2rem;
+        justify-content: flex-end;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* Cambiar a 3 productos por fila en tablets */
+    }
+}
