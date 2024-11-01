@@ -29,6 +29,11 @@ nav {
     font-size: 1.5rem;
     cursor: pointer;
     left: 0; /* Ajuste automático para la posición */
+    transition: color 0.3s ease-in-out;
+}
+
+.hamburger:hover {
+    color: #00ffff;
 }
 
 /* Enlaces de la barra de navegación (lado izquierdo) */
@@ -53,13 +58,37 @@ nav .nav-left li a:hover {
 
 /* Logo */
 nav .logo {
-    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 1;
 }
 
 nav .logo img {
     max-width: 30px;
     height: auto;
+    transition: opacity 0.3s ease;
+}
+
+nav .logo .logo-img {
+    position: absolute;
+    transform: translateY(-18px);
+}
+
+nav .logo .logo-hover-img {
+    position: absolute;
+    transform: translateY(-18px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+nav .logo:hover .logo-img {
+    opacity: 0;
+}
+
+nav .logo:hover .logo-hover-img {
+    opacity: 1;
 }
 
 /* Redes sociales (lado derecho) */
@@ -259,10 +288,6 @@ footer .container {
     }
     /* Encabezado: aqui termina... */
 
-    .product-grid {
-        padding: 0rem;
-    }
-    
     .grid {
         grid-template-columns: repeat(1, 1fr);
         gap: 16px;
@@ -348,10 +373,6 @@ footer .container {
         order: -1;
     }
     /* Encabezado: aqui termina... */
-
-    .product-grid {
-        padding: 1rem;
-    }
     
     .grid {
         grid-template-columns: repeat(1, 1fr); /* Mostrar dos productos por fila */
