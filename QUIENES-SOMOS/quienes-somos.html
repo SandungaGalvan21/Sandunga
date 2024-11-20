@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¿QUIÉNES SOMOS?</title>
     <link rel="icon" href="/LOGO-IMG/MENTA.png" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="/stylesheaderyfooter.css"> <!-- encabezado y pie de pagina -->
     <link rel="stylesheet" href="stylesquienessomos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -25,16 +26,22 @@
             <div class="logo">
                 <a href="/PAGINA-PRINCIPAL/pagina-principal.html">
                     <img src="/LOGO-IMG/NEGRO.png" alt="Logo" class="logo-img">
-                    <img src="/LOGO-IMG/MENTA.png" alt="Logo Hover" class="logo-hover-img">
                 </a>
             </div>
             <div class="flex">
-                <a href="https://www.instagram.com/sandunga2121/"><i class="fab fa-instagram"></i></a>
-                <a href="https://www.tiktok.com/@sandunga.21?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
-                <a href="https://wa.me/5585705008"><i class="fab fa-whatsapp"></i></a>
-                <a href="https://www.facebook.com/profile.php?id=61563504766735"><i class="fab fa-facebook"></i></a>
+                <div>
+                    <a href="https://www.instagram.com/sandunga2121/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@sandunga.21?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://wa.me/5585705008"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61563504766735"><i class="fab fa-facebook"></i></a>
+                </div>
+                <div>
+                    <ul class="nav-left">
+                        <li><a href="/QUIENES-SOMOS/quienes-somos.html">¿Quiénes somos?</a></li>
+                    </ul>
+                </div>
             </div>
-        </nav>
+            </nav>
     </header>
     
     <!-- Main Content -->
@@ -78,11 +85,11 @@
         </div>
     </div>
 
-    <!-- Pie de pagina: Aqui empieza... -->
+    <!-- Footer Section -->
     <footer class="footer">
         <div class="container grid">
             <!-- Left Column: Links -->
-            <div>
+            <div class="izq">
                 <ul class="space-y-4">
                     <li><a href="/QUIENES-SOMOS/quienes-somos.html">¿Quiénes somos?</a></li>
                 </ul>
@@ -92,7 +99,7 @@
                 </div>
             </div>
             <!-- Middle Column: Contact Info -->
-            <div>
+            <div class="centro">
                 <ul class="space-y-4">
                     <li>Contactos:</li>
                     <li>55-8570-5008</li>
@@ -102,7 +109,7 @@
                 </ul>
             </div>
             <!-- Social Media Links in Footer -->
-            <div class="w-full bg-gray-200 py-4">
+            <div class="der w-full bg-gray-200 py-4">
                 <div class="container flex justify-center">
                     <a href="https://www.instagram.com/sandunga2121/"><i class="fab fa-instagram"></i></a>
                     <a href="https://www.tiktok.com/@sandunga.21?is_from_webapp=1&sender_device=pc"><i class="fab fa-tiktok"></i></a>
@@ -112,7 +119,7 @@
             </div>
         </div>
     </footer>
-    <!-- Pie de pagina: Aqui acaba... -->
+    
     <!-- Agreguen esto igual, ya que esto hace responsiva la pagina tambien -->
     <script>
         const hamburger = document.querySelector('.hamburger');

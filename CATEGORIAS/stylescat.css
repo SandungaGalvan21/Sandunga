@@ -1,148 +1,63 @@
-/* Estilos generales */
-body {
-    background-color: white;
-    font-family: 'Helvetica Neue', sans-serif;
-    margin: 0;
-    overflow-x: hidden;
-}
-
-/* Encabezado: aqui empieza... */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 2rem;
-    border-bottom: 1px solid #E5E7EB;
-    flex-wrap: wrap;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background-color: white;
-    box-sizing: border-box;
-}
-
-/* Botón de menú hamburguesa */
-.hamburger {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    left: 0; /* Ajuste automático para la posición */
-    transition: color 0.3s ease-in-out;
-}
-
-.hamburger:hover {
-    color: #00ffff;
-}
-
-/* Enlaces de la barra de navegación (lado izquierdo) */
-nav .nav-left {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    transition: max-height 0.3s ease;
-}
-
-nav .nav-left li a {
-    color: inherit;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
-
-nav .nav-left li a:hover {
-    color: #00ffff;
-}
-
-/* Logo */
-nav .logo {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 1;
-}
-
-nav .logo img {
-    max-width: 30px;
-    height: auto;
-    transition: opacity 0.3s ease;
-}
-
-nav .logo .logo-img {
-    position: absolute;
-    transform: translateY(-18px);
-}
-
-nav .logo .logo-hover-img {
-    position: absolute;
-    transform: translateY(-18px);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-nav .logo:hover .logo-img {
-    opacity: 0;
-}
-
-nav .logo:hover .logo-hover-img {
-    opacity: 1;
-}
-
-/* Redes sociales (lado derecho) */
-nav .flex {
-    display: flex;
-    gap: 5rem;
-    justify-content: flex-end;
-}
-
-nav .flex a {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: black;
-}
-
-nav .flex a:hover {
-    color: #00ffff;
-}
-/* Encabezado: aqui termina... */
-
 /* Main Section */
 .main-section {
     text-align: center;
-    padding: 3rem 0.5rem; /* Aumenté el padding para más espacio */
-    background-color: #f9fafb; /* Fondo suave para separar visualmente la sección */
+    padding: 1rem; /* Aumenté el padding para más espacio */
 }
 
 .main-section h1 {
-    font-size: 3rem; /* Ajusté el tamaño del título */
+    letter-spacing: -0.05em;
+    font-size: 4rem; /* Ajusté el tamaño del título */
     font-weight: 700; /* Un poco menos pesado para más legibilidad */
-    margin-bottom: 0rem; /* Espacio debajo del título */
-    color: #333; /* Un tono más suave de negro */
+    margin-bottom: -1rem; /* Espacio debajo del título */
 }
 
 .main-section p {
-    font-size: 1.125rem; /* Ajuste de tamaño de texto */
-    line-height: 1.6; /* Mejorar la legibilidad del texto */
-    color: #555; /* Color gris oscuro para contraste suave */
-    max-width: auto; /* Limitar el ancho del párrafo */
+    font-size: 1rem; /* Ajuste de tamaño de texto */
     margin: 0 auto; /* Centrar el texto */
-    padding: 1.2rem; /* Más espacio alrededor del texto */
-    border-radius: 0.5rem; /* Esquinas redondeadas */
+    padding: 1rem; /* Más espacio alrededor del texto */
 }
 
-/* Product Grid */
-/* Ajuste del contenedor .product-grid */
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adaptativo para pantallas pequeñas y grandes */
-    gap: 2rem;
-    justify-items: center; /* Centra los elementos dentro de la rejilla */
+/* Carrusel contenedor con 6 productos visibles */
+.carousel-container {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 2rem; /* Añadir margen para separación */
 }
 
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+/* Ajustar la cantidad de productos visibles (6 productos) */
+.carousel-item {
+    flex: 0 0 calc(100% / 6); /* Cada producto ocupa 1/6 del contenedor */
+    box-sizing: border-box;
+    padding: 0 0.25rem; /* Espacio entre los items */
+}
+
+/* Flechas del carrusel */
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.carousel-arrow.left {
+    left: 10px;
+}
+
+.carousel-arrow.right {
+    right: 10px;
+}
+
+/* Estilos para los productos dentro del carrusel */
 .product-item {
     padding: 1rem;
 }
@@ -172,248 +87,61 @@ nav .flex a:hover {
     text-decoration: none; /* Asegúrate de que no haya subrayado */
 }
 
-/* Pie de pagina: aqui empieza... */
-.footer {
-    background-color: #e5e7eb;
-    padding: 16px 0;
-    width: 100%;
-    box-sizing: border-box;
+/* Estilo para el botón "ver todo" */
+.product-item .view-all-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
     text-align: center;
-}
-
-.container {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 40px;
-    box-sizing: border-box;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 40px;
-    justify-items: center;
-}
-
-.space-y-4 {
-    list-style-type: none;
-    padding: 0;
-}
-
-.space-y-4 li {
-    font-size: 18px;
-    color: #4a5568;
-    text-align: center;
-}
-
-.space-y-4 li a {
     text-decoration: none;
-    color: #4a5568;
-    transition: color 0.3s ease;
-}
-  
-.space-y-4 li a:hover {
-    color: #00ffff;
 }
 
-.flex.justify-center {
-    display: column;
-    justify-content: center;
-    gap: 24px;
+.product-item .view-all-btn:hover {
+    background-color: #0056b3;
 }
 
-.flex.justify-center a {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: black;
-    transition: color 0.2s ease-in-out;
+/* Estilos del banner */
+.banner {
+    width: 100%;
+    overflow: hidden; /* Oculta el contenido que se desplaza fuera del contenedor */
+    background-color: #F8ED57;
+    color: #000000;
+    padding: 2rem;
 }
 
-.flex.justify-center a:hover {
-    color: #00ffff;
-}
-/* Pie de pagina: aqui termina... */
-
-/* Estilos para pantallas pequeñas (Apple Watch y celulares) */
-@media (max-width: 430px) {
-    /* Encabezado: aqui empieza... */
-    nav .nav-left {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        right: 0;
-        background-color: white;
-        padding: 1rem;
-        border: 1px solid #E5E7EB;
-        z-index: 1000;
-    }
-
-    nav .nav-left.active {
-        display: flex;
-    }
-
-    nav .flex {
-        display: flex;
-        gap: 1rem;
-        justify-content: flex-end;
-    }
-
-    .hamburger {
-        display: block;
-        order: -2;
-    }
-
-    .logo {
-        order: -1;
-    }
-    /* Encabezado: aqui termina... */
-
-    .product-grid {
-        width: 100%;
-        height: auto;
-        grid-template-columns: 1fr; /* Mostrar un solo producto por fila (apilado) */
-        gap: 0rem; /* Espaciado entre los elementos */
-        padding: 0; /* Sin padding lateral para aprovechar el espacio */
-    }
-
-    .product-item {
-        margin-bottom: 1rem; /* Añadir margen inferior para espaciado entre productos */
-    }
-
-    .product-item a {
-        font-size: 1rem; /* Ajusta el tamaño del texto */
-        font-weight: 100; /* Mantén o ajusta el peso de la fuente */
-        text-align: center;
-        color: #333;
-        text-decoration: none; /* Asegúrate de que no haya subrayado */
-    }
-    
-    /* Pie de pagina: aqui empieza... */
-    .footer {
-        padding: 1rem 0;
-        text-align: center;
-    }
-
-    .container {
-        width: 100%;
-        padding-top: 20px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        padding: 0 1rem;
-    }
-
-    .space-y-4 li {
-        font-size: 16px;
-        word-wrap: break-word;
-    }
-
-    .flex.justify-center {
-        display: flex;
-        gap: 2rem;
-        justify-content: flex-end;
-        }
-
-    .flex.justify-center a {
-        font-size: 1.2rem;
-    }
-    /* Pie de pagina: aqui termina.. */
+.banner-content {
+    display: inline-block;
+    white-space: nowrap; /* Evita que el texto se divida en líneas */
+    animation: slide-left 15s linear infinite; /* Animación hacia la izquierda */
 }
 
-/* Tablets */
-@media (min-width: 768px) and (max-width: 884px) {
-    /* Encabezado: aqui empieza... */
-    nav .nav-left {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 50px;
-        left: 0;
-        right: 0;
-        background-color: white;
-        padding: 1rem;
-        border: 1px solid #E5E7EB;
-        z-index: 1000;
-    }
-
-    nav .nav-left.active {
-        display: flex;
-    }
-
-    nav .flex {
-        display: flex;
-        gap: 1rem;
-        justify-content: flex-end;
-    }
-
-    .hamburger {
-        display: block;
-        order: -2;
-    }
-
-    .logo {
-        order: -1;
-    }
-    /* Encabezado: aqui termina... */
-
-    .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* Cambiar a 3 productos por fila en tablets */
-    }
-
-    .product-item a {
-        font-size: 1rem; /* Ajusta el tamaño del texto */
-        font-weight: 100; /* Mantén o ajusta el peso de la fuente */
-        text-align: center;
-        color: #333;
-        text-decoration: none; /* Asegúrate de que no haya subrayado */
-    }
-
-    /* Pie de pagina: aqui empieza... */
-    .footer {
-        padding: 1rem 0;
-        text-align: center;
-    }
-
-    .container {
-        width: 100%;
-        padding-top: 20px;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-        justify-items: center;
-        padding: 0 1rem;
-    }
-
-    .space-y-4 li {
-        font-size: 16px;
-        word-wrap: break-word;
-    }
-
-    .flex.justify-center {
-        display: flex;
-        gap: 2rem;
-        justify-content: flex-end;
-        }
-
-    .flex.justify-center a {
-        font-size: 1.2rem;
-    }
-    /* Pie de pagina: aqui termina.. */
+/* Ajuste de ancho para permitir que el texto se repita */
+.banner-content span {
+    padding-right: 2rem; /* Espacio entre las repeticiones */
 }
 
-/* Laptops y televisión */
-@media (min-width: 885px) {
-    .flex.justify-center {
-        display: flex;
-        gap: 2rem;
-        justify-content: flex-end;
+/* Animación hacia la izquierda */
+@keyframes slide-left {
+    0% {
+        transform: translateX(0); /* Comienza en la posición inicial */
     }
-    .product-grid {
-        grid-template-columns: repeat(4, 1fr); /* Cambiar a 3 productos por fila en tablets */
+    100% {
+        transform: translateX(-50%); /* Se mueve hacia la izquierda la mitad del ancho */
+    }
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .carousel-item {
+        flex: 0 0 calc(100% / 3); /* Mostrar 3 productos en pantallas medianas */
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-item {
+        flex: 0 0 100%; /* Mostrar 1 producto en pantallas muy pequeñas */
     }
 }

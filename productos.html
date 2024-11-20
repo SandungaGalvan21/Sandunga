@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel - Cuidado con el Perro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white text-black font-sans">
+
+    <!-- Header -->
+    <header class="flex items-center justify-between p-4 border-b border-black">
+        <nav class="flex space-x-4">
+            <a href="#" class="hover:underline">MUJER</a>
+            <a href="#" class="hover:underline font-bold">HOMBRE</a>
+            <a href="#" class="hover:underline">KIDS</a>
+            <a href="#" class="hover:underline">MALAYERBA</a>
+            <a href="#" class="hover:underline">BUSCAR</a>
+        </nav>
+        <div class="flex space-x-4">
+            <a href="#" class="hover:underline">INICIAR SESIÓN</a>
+            <a href="#" class="hover:underline">FAVORITOS</a>
+            <a href="#" class="hover:underline">CARRITO (0)</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <h1 class="text-5xl font-bold tracking-wider">DESTACADOS</h1>
+        <p class="text-2xl mt-2 mb-8">NUEVA COLECCION</p>
+        
+        <!-- Carousel Container -->
+        <div class="relative overflow-hidden w-full">
+            <!-- Carousel Wrapper -->
+            <div id="carousel" class="flex transition-transform duration-300">
+                
+                <!-- Carousel Items (Product Cards) -->
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 1" class="w-full h-auto mb-2">
+                        <p class="font-bold">NOVEDADES</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 2" class="w-full h-auto mb-2">
+                        <p class="font-bold">BÁSICOS</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 3" class="w-full h-auto mb-2">
+                        <p class="font-bold">PLAYERAS</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 4" class="w-full h-auto mb-2">
+                        <p class="font-bold">CAMISAS</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 5" class="w-full h-auto mb-2">
+                        <p class="font-bold">SUDADERAS Y SUÉTERES</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 5" class="w-full h-auto mb-2">
+                        <p class="font-bold">SUDADERAS Y SUÉTERES</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 5" class="w-full h-auto mb-2">
+                        <p class="font-bold">SUDADERAS Y SUÉTERES</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 5" class="w-full h-auto mb-2">
+                        <p class="font-bold">SUDADERAS Y SUÉTERES</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 5" class="w-full h-auto mb-2">
+                        <p class="font-bold">SUDADERAS Y SUÉTERES</p>
+                    </div>
+                </div>
+                <div class="flex-shrink-0 w-1/6">
+                    <div class="p-4 bg-white rounded-lg shadow-md text-center">
+                        <img src="https://i.ibb.co/zxdHkyT/IMG-9965-1.jpg" alt="Producto 5" class="w-full h-auto mb-2">
+                        <p class="font-bold">SUDADERAS Y SUÉTERES</p>
+                    </div>
+                </div>
+
+                <!-- Additional products can be added here if needed -->
+            </div>
+
+            <!-- Left and Right Navigation Arrows -->
+            <button onclick="moveCarousel(-1)" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button onclick="moveCarousel(1)" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-100">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </main>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveCarousel(direction) {
+            const carousel = document.getElementById('carousel');
+            const itemWidth = carousel.children[0].offsetWidth; // Width of each item
+            const visibleItems = 6; // Number of visible items
+            const totalItems = carousel.children.length;
+
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex > totalItems - visibleItems) currentIndex = totalItems - visibleItems;
+
+            carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        }
+    </script>
+</body>
+</html>

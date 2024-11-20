@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SANDUNGA</title>
+    <link rel="icon" href="LOGO-IMG/MENTA.png" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="stylespaginaprincipal.css"> <!-- Estilos de la página -->
+    <link rel="stylesheet" href="/HEADER-FOOTER/stylesheaderyfooter.css"> <!-- Encabezado y pie de página -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div id="header-container"></div> <!-- div para encabezado -->
+
+    <section> <!-- Aquí empieza el contenido de la página principal -->
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="relative">
+                    <a href="/CATEGORIAS/catdama.html">
+                        <img src="https://i.ibb.co/XbqfbrP/DAMA.png" alt="Imagen de productos para dama">
+                    </a>
+                    <h2>DAMA</h2>
+                </div>
+                <div class="relative">
+                    <a href="/CATEGORIAS/catcaballero.html">
+                        <img src="https://i.ibb.co/XZKNgq4/CABALLERO.png" alt="Imagen de productos para caballero">
+                    </a>
+                    <h2>CABALLERO</h2>
+                </div>
+                <div class="relative">
+                    <a href="/CATEGORIAS/catkids.html">
+                        <img src="https://i.ibb.co/SnLNf6R/PLAYERAS-NINAS.jpg" alt="Imagen de productos para niños">
+                    </a>
+                    <h2>KIDS</h2>
+                </div>
+                <div class="relative">
+                    <a href="/CATEGORIAS/cataccesorios.html">
+                        <img src="https://i.ibb.co/JsWDrMK/ACC.png" alt="Imagen de accesorios">
+                    </a>
+                    <h2>ACCESORIOS</h2>
+                </div>
+                <div class="relative">
+                    <a href="/CATEGORIAS/catmaquillaje.html">
+                        <img src="https://i.ibb.co/hmy6NH8/4005.png" alt="Imagen de productos de maquillaje">
+                    </a>
+                    <h2>MAQUILLAJE</h2>
+                </div>
+            </div>
+            <!-- Controles del carrusel -->
+            <div class="carousel-controls">
+                <button class="carousel-control-prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-control-next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div> <!-- div para pie de página -->
+
+    <script> 
+        // Script para el carrusel
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const items = document.querySelectorAll('.carousel .carousel-inner .relative');
+            const totalItems = items.length;
+            const itemWidth = items[0].offsetWidth;
+
+            // Calcular el nuevo índice
+            currentIndex += direction;
+
+            // Asegurarse de que el índice se mantenga dentro de los límites
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            }
+            if (currentIndex >= totalItems - 3) {
+                currentIndex = totalItems - 3;
+            }
+
+            // Actualizar la propiedad transform para mover los elementos
+            document.querySelector('.carousel-inner').style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        }
+    </script>
+
+    <script>
+        // Función para cargar el header y footer desde un archivo externo
+        async function cargarHeaderFooter() {
+            try {
+                const respuesta = await fetch('/HEADER-FOOTER/header-footer.html');
+                if (!respuesta.ok) throw new Error('Error al cargar el archivo header-footer.html');
+
+                const contenido = await respuesta.text();
+                const contenedorTemporal = document.createElement('div');
+                contenedorTemporal.innerHTML = contenido;
+
+                const header = contenedorTemporal.querySelector('header');
+                const footer = contenedorTemporal.querySelector('footer');
+
+                if (header) document.getElementById('header-container').appendChild(header);
+                if (footer) document.getElementById('footer-container').appendChild(footer);
+
+                // Código para el menú de hamburguesa
+                const hamburger = document.querySelector('.hamburger');
+                const navLeft = document.querySelector('.nav-left');
+
+                hamburger.addEventListener('click', () => {
+                    navLeft.classList.toggle('active');
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+
+        // Llamada a la función para cargar y procesar el header y footer
+        cargarHeaderFooter();
+    </script>
+</body>
+</html>

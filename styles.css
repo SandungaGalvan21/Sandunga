@@ -1,0 +1,56 @@
+/* Estilos generales
+body {
+    display: flex;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000000;
+    margin: 0;
+}
+
+/* Estilo del texto
+.container {
+    color: #ffffff;
+    font-weight: 800; /*Similar al font-bold de Tailwind
+    font-size: 5rem;
+    letter-spacing: -0.05em;
+    text-align: center;
+} */
+
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del banner */
+.banner {
+    width: 100%;
+    overflow: hidden; /* Oculta el contenido que se desplaza fuera del contenedor */
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+.banner-content {
+    display: inline-block;
+    white-space: nowrap; /* Evita que el texto se divida en líneas */
+    animation: slide-left 15s linear infinite; /* Animación hacia la izquierda */
+}
+
+/* Ajuste de ancho para permitir que el texto se repita */
+.banner-content span {
+    padding-right: 2rem; /* Espacio entre las repeticiones */
+}
+
+/* Animación hacia la izquierda */
+@keyframes slide-left {
+    0% {
+        transform: translateX(0); /* Comienza en la posición inicial */
+    }
+    100% {
+        transform: translateX(-50%); /* Se mueve hacia la izquierda la mitad del ancho */
+    }
+}
+

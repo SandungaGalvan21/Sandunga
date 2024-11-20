@@ -29,11 +29,6 @@ nav {
     font-size: 1.5rem;
     cursor: pointer;
     left: 0; /* Ajuste automático para la posición */
-    transition: color 0.3s ease-in-out;
-}
-
-.hamburger:hover {
-    color: #00ffff;
 }
 
 /* Enlaces de la barra de navegación (lado izquierdo) */
@@ -58,37 +53,13 @@ nav .nav-left li a:hover {
 
 /* Logo */
 nav .logo {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     flex: 1;
 }
 
 nav .logo img {
     max-width: 30px;
     height: auto;
-    transition: opacity 0.3s ease;
-}
-
-nav .logo .logo-img {
-    position: absolute;
-    transform: translateY(-18px);
-}
-
-nav .logo .logo-hover-img {
-    position: absolute;
-    transform: translateY(-18px);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-nav .logo:hover .logo-img {
-    opacity: 0;
-}
-
-nav .logo:hover .logo-hover-img {
-    opacity: 1;
 }
 
 /* Redes sociales (lado derecho) */
@@ -130,12 +101,11 @@ nav .flex a:hover {
 
 .product-card {
     background-color: white;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra combinada */
     border-radius: 8px;
     overflow: hidden;
     position: relative;
     border: 2px solid #eeeeee; /* Borde gris */
-    box-shadow: 0 4px 8px #0000001a; /* Sombra */
 }
 
 .product-image {
@@ -158,28 +128,49 @@ nav .flex a:hover {
 }
 
 .product-info {
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em; 
+    padding: 1em; /* Añadido padding para despegar la información del borde */
+    text-align: left;
+    background-color: #eeeeee;
+}
+
+.product-name,
+.product-price,
+.product-color {
+    margin: 0; /* Elimina márgenes innecesarios */
 }
 
 .product-name {
-    color: #4A4A4A;
-    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000000;
 }
 
 .product-price {
     font-size: 1rem;
+    color: rgb(84, 84, 84);
     font-weight: bold;
 }
 
 .product-color {
-    color: #A0A0A0;
+    font-size: 0.9rem;
+    color: #000000;
+    gap: .1em;
+    font-weight: bold;
 }
 
 .product-actions {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 16px;
+    gap: 0.5em; /* Espacio entre las opciones */
+}
+
+.product-actions h3 {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #000000;
+    margin: 0; /* Elimina márgenes adicionales */
 }
 
 /* Pie de pagina: aqui empieza... */

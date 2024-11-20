@@ -1,0 +1,180 @@
+/* Estilos generales */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 55px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.relative {
+    flex: 1 0 32.80%;
+    box-sizing: border-box;
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+section div.relative {
+    position: relative;
+}
+
+section div.relative a img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    border: 2px solid #eeeeee;
+    box-shadow: 0 4px 8px #0000003b;
+}
+
+section div.relative h2 {
+    color: #ffffff;
+    font-weight: 1000;
+    font-size: 2.5rem;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-shadow: 2px 2px 5px #000000;
+    width: 100%;
+    text-align: center;
+}
+
+/* Controles del carrusel */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #000;
+    cursor: pointer;
+}
+
+.carousel-control-prev {
+    margin-left: 10px;
+}
+
+.carousel-control-next {
+    margin-right: 10px;
+}
+
+/* Dispositivos móviles */
+@media (max-width: 764px) {
+    .carousel-inner {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .relative {
+        min-width: 100%;
+    }
+
+    /* Asegura que las imágenes sean del mismo tamaño solo en celulares */
+    .relative img {
+        width: 100%;           /* Mantener el ancho al 100% */
+        height: 90vmax;         /* Asegura una altura fija en dispositivos móviles */
+        object-fit: cover;     /* Asegura que la imagen cubra todo el área sin distorsión */
+        margin-top: 5%;        /* Añadir un pequeño margen superior */
+    }
+
+    .carousel-controls {
+        display: none;
+    }
+
+    section div.relative h2 {
+        font-size: 2rem;
+        bottom: 20px;
+        background: rgba(0, 0, 0, 0);
+        border-radius: 0.5rem;
+    }
+}
+
+/* Para dispositivos móviles pequeños, como iPhone 5, iPhone SE, etc. */
+@media (max-width: 400px) {
+    .relative {
+        flex: 0 0 50%;  /* Hace que las categorías ocupen el 90% del ancho de la pantalla */
+    }
+
+    .relative img {
+        width: 70%;
+        height: 83vmin;  /* Reduce la altura de las imágenes en dispositivos más pequeños */
+    }
+
+    /* Se agrega una regla especial para iPhone 5 y dispositivos más pequeños */
+    .carousel-inner .relative img {
+        height: 83vmax; /* Ajusta la altura solo para dispositivos más pequeños */
+        object-fit: cover; /* Asegura que las imágenes no se distorsionen */
+    }
+
+    section div.relative h2 {
+        font-size: 1.8rem; /* Disminuye el tamaño del texto en pantallas pequeñas */
+    }
+    
+}
+
+/* Tabletas */
+@media (min-width: 765px) and (max-width: 1024px) {
+    .carousel-inner {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .relative {
+        min-width: 100%; /* Asegura que todas las categorías se adapten */
+    }
+
+    .relative img {
+        width: 100%;
+        height: 300px; /* Ajusta la altura para que todas las imágenes tengan el mismo tamaño */
+        object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    }
+
+    section div.relative h2 {
+        font-size: 2rem;
+        bottom: 10%; /* Ajusta la posición del título dentro de la categoría */
+        background: rgba(0, 0, 0, 0); /* Fondo semitransparente */
+        border-radius: 0.5rem;
+        position: absolute; /* Asegura que el título esté dentro de la categoría */
+    }
+
+    .carousel-inner {
+        display: flex;
+        justify-content: space-between; /* Asegura que las 5 categorías estén distribuidas */
+    }
+
+    .relative {
+        flex: 0 0 auto; /* Permite que las 5 categorías se ajusten correctamente */
+        width: 19%; /* Ajusta el ancho para que las 5 categorías se muestren */
+    }
+
+    /* Asegura que todas las imágenes sean del mismo tamaño (incluye la imagen 3 y 5) */
+    .carousel-inner .relative img {
+        height: 90vmax; /* Define una altura fija para todas las imágenes */
+        object-fit: cover; /* Asegura que las imágenes no se distorsionen */
+    }
+
+    /* Quitar flechas en tablets */
+    .carousel-controls {
+        display: none; /* Oculta las flechas de navegación en tabletas */
+    }
+}

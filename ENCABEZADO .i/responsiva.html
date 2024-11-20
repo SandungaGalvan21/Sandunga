@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Desplegable con Animación Suave</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="responsiva.css">
+    <!-- <style>
+    </style> -->
+</head>
+<body>
+    <header>
+        <nav class="container flex justify-between items-center">
+            <!-- Ícono de hamburguesa para pantallas pequeñas -->
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            
+            <!-- Secciones del menú -->
+            <div class="menu-sections">
+                <!-- Menú de Mujer -->
+                <div class="dropdown">
+                    <button>MUJER</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item"><span class="dropdown-text">TOP VENTAS</span></div>
+                        <div class="dropdown-item"><span class="dropdown-text">CCP X NETO PEÑA</span></div>
+                        <div class="dropdown-item"><span class="dropdown-text">FIESTA</span></div>
+                        <div class="dropdown-item"><span class="dropdown-text">REGALOS DE NAVIDAD</span></div>
+                        <div class="dropdown-item"><span class="dropdown-text">FESTIVALES</span></div>
+                    </div>
+                </div>
+
+                <!-- Menú de Hombre -->
+                <div class="dropdown">
+                    <button>HOMBRE</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-divider"></div>
+                        <div class="dropdown-item"><span class="dropdown-text">TOP VENTAS</span></div>
+                        <div class="dropdown-item"><span class="dropdown-text">PLAYERAS</span></div>
+                        <div class="dropdown-item"><span class="dropdown-text">JEANS</span></div>
+                        <div class="dropdown-item"><span class="dropdown-text">SUDADERAS Y SUÉTERES</span></div>
+                    </div>
+                </div>
+
+                <!-- Menú de Kids -->
+                <div class="dropdown">
+                    <button>KIDS</button>
+                    <div class="dropdown-content">
+                        <!-- Opciones para Kids -->
+                    </div>
+                </div>
+
+                <!-- Menú de Malayerba -->
+                <div class="dropdown">
+                    <button>MALAYERBA</button>
+                    <div class="dropdown-content">
+                        <!-- Opciones para Malayerba -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección derecha del menú -->
+            <div class="flex items-center space-x-4 nav-right">
+                <a href="#">INICIAR SESIÓN</a>
+                <a href="#">FAVORITOS</a>
+                <a href="#">CARRITO (0)</a>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector('.menu-sections').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
