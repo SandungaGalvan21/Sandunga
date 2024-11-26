@@ -39,7 +39,7 @@ section div.relative a img {
     object-fit: cover; /* Asegura que la imagen mantenga proporción mientras llena el contenedor */
     border-radius: 1rem;
     border: 2px solid #eeeeee;
-    box-shadow: 0 4px 8px #0000003b;
+    box-shadow: 0 1px 3px #0000003b;
 }
 
 section div.relative h2 {
@@ -72,16 +72,65 @@ section div.relative h2 {
             font-size: 20px;
         }
 
-/* Estilos para pantallas pequeñas (celulares) */
+/* Estilos para pantallas pequeñas (teléfonos) */
 @media (max-width: 430px) {
+    .carousel {
+        height: auto;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* Espaciado constante entre elementos */
+    }
+
+    .carousel-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* Espaciado forzado entre elementos */
+    }
+
     .relative {
-        min-width: 100%; /* Mostrar solo 1 producto */
+        min-width: 100%;
+        margin: 0; /* Eliminar márgenes adicionales */
+    }
+
+    .carousel-controls {
+        display: none; /* Ocultar los botones de navegación */
     }
 }
 
 /* Estilos para tablets */
 @media (min-width: 768px) and (max-width: 884px) {
+    .carousel {
+        height: auto;
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* Espaciado constante entre elementos */
+    }
+
+    .carousel-inner {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem; /* Espaciado forzado entre elementos */
+    }
+
     .relative {
-        min-width: 50%; /* Mostrar 2 productos si es posible */
-    } 
+        min-width: 100%;
+        margin: 0; /* Eliminar márgenes adicionales */
+    }
+
+    section div.relative h2 {
+        font-size: 11.5vw;
+    }
+
+section div.relative a img {
+    width: 95vw; /* Usar vw para que el ancho se ajuste automáticamente al tamaño de la ventana */
+    height: auto; /* Mantener la proporción de la imagen */
+    min-height: 100%; /* Garantiza que la imagen no se deforme */
+    object-fit: cover; /* Para que la imagen se ajuste correctamente sin perder proporción */
+}
+
+    .carousel-controls {
+        display: none; /* Ocultar los botones de navegación */
+    }
 }

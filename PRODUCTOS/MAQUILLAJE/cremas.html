@@ -1,0 +1,97 @@
+<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CREMAS</title>
+    <link rel="icon" href="/LOGO-IMG/MENTA.png" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="/HEADER-FOOTER/stylesheaderyfooter.css"> <!-- encabezado y pie de pagina -->
+    <link rel="stylesheet" href="/PRODUCTOS/stylesprod.css"> <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white font-sans">
+    <div id="header-container"></div> <!-- div para encabezado -->     
+    <!-- Product Grid 1 -->
+    <section class="container product-grid">
+        <h1 class="title">CREMAS</h1>
+        <div class="grid">
+            <!-- Product Cards -->
+            <div class="product-card">
+                    <img src="https://i.ibb.co/Sf8vbQW/CREMAS-DE-MANO-2.jpg" alt="Product 1" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Crema Para Las Manos</h3>
+                    <p class="product-price">$15.00</p>
+                    <p class="product-color">PERSONAJES: POMPOMPURIN, MELODY, KITTY, KUROMI Y CINNAMOROLL</p>
+                    <div class="product-actions">
+                        <p class="product-price">CONT. NET.</p>
+                        <h3 class="product-name">250g</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                    <img src="https://i.ibb.co/BtV0RQ5/CREMAS-DE-MANO.jpg" alt="Product 2" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Crema Para Las Manos</h3>
+                    <p class="product-price">$15.00</p>
+                    <p class="product-color">PERSONAJES: KITTY</p>
+                    <div class="product-actions">
+                        <p class="product-price">CONT. NET.</p>
+                        <h3 class="product-name">250g</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                    <img src="https://i.ibb.co/fHtRj4X/CREMAS-DE-MANO-NAVIDAD.jpg" alt="Product 2" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Cremas Para Las Manos</h3>
+                    <p class="product-price">$15.00</p>
+                    <p class="product-color">PERSONAJES: SANTA CLAUS, VENADO, MUÑECO DE NIEVE, ÁRBOL Y BOTA</p>
+                    <div class="product-actions">
+                        <p class="product-price">CONT. NET.</p>
+                        <h3 class="product-name">250g</h3>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <div id="footer"></div> <!-- div para pie de página-->
+
+    <script> /* script para header y footer */
+        // Función para cargar el header y footer desde un archivo externo
+        async function cargarHeaderFooter() {
+            try {
+                const respuesta = await fetch('/HEADER-FOOTER/header-footer.html');
+                if (!respuesta.ok) throw new Error('Error al cargar el archivo header-footer.html');
+    
+                const contenido = await respuesta.text();
+                const contenedorTemporal = document.createElement('div');
+                contenedorTemporal.innerHTML = contenido;
+    
+                const header = contenedorTemporal.querySelector('header');
+                const footer = contenedorTemporal.querySelector('footer');
+    
+                if (header) document.getElementById('header-container').appendChild(header);
+                if (footer) document.getElementById('footer-container').appendChild(footer);
+    
+                // Código para el menú de hamburguesa
+                const hamburger = document.querySelector('.hamburger');
+                const navLeft = document.querySelector('.nav-left');
+    
+                hamburger.addEventListener('click', () => {
+                    navLeft.classList.toggle('active');
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    
+        // Llamada a la función para cargar y procesar el header y footer
+        cargarHeaderFooter();
+    </script>
+</body>
+</html>

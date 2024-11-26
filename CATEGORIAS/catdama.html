@@ -1,202 +1,117 @@
+<html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DAMA</title>
     <link rel="icon" href="/LOGO-IMG/MENTA.png" type="image/x-icon"> <!-- Favicon -->
-    <link rel="stylesheet" href="/HEADER-FOOTER/stylesheaderyfooter.css"> <!-- encabezado y pie de pagina -->
-    <link rel="stylesheet" href="/CATEGORIAS/stylescat.css">
-    <link rel="stylesheet" href="/PRODUCTOS/stylesprod.css">
+    <link rel="stylesheet" href="/HEADER-FOOTER/stylesheaderyfooter.css">
+    <link rel="stylesheet" href="stylescat.css"> <!-- Se incluye la hoja de estilos externa -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
-<style>
-    #DAMA {
-        background-color: #000000;
-        color: #ffffff;
-    }
-</style>
 <body>
     <div id="header-container"></div> <!-- div para encabezado -->
-
-    <!-- Main Section 1-->
-    <section class="main-section section1">
+    <!-- Main Section -->
+    <section class="main-section">
         <h1><span>DAMA</span></h1>
         <p>COLECCIÓN</p>
 
-        <!-- Carousel Container 1 -->
-        <div class="carousel-container">
-            <div id="carousel1" class="carousel-wrapper">
-                <!-- Carousel Items (Product Cards) -->
-                <div class="carousel-item">
-                    <div class="product-item">
-                        <a href="/PRODUCTOS/DAMA/playeras.html">
-                            <img src="https://i.ibb.co/Gxq0Qf7/BLUSA-NEGRA-CON-FIGURAS.png" alt="Playeras">
-                            <p>PLAYERAS</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="product-item">
-                        <a href="/PRODUCTOS/DAMA/blusas.html">
-                            <img src="https://i.ibb.co/ng92XsF/BLUSA-MEZCLILLA-copia.png" alt="Blusas">
-                            <p>BLUSAS</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="product-item">
-                        <a href="/PRODUCTOS/DAMA/sudaderas.html">
-                            <img src="https://i.ibb.co/XLNHSvg/p2.png" alt="Sudaderas y Suéteres">
-                            <p>SUDADERAS Y SUÉTERES</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="product-item">
-                        <a href="/PRODUCTOS/DAMA/jeans.html">
-                            <img src="https://i.ibb.co/NYJ9P01/PANTALONES.png" alt="Jeans">
-                            <p>JEANS</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="product-item">
-                        <a href="/PRODUCTOS/DAMA/mayones.html">
-                            <img src="https://i.ibb.co/8DN6Vqh/p6.png" alt="Pantalones">
-                            <p>MAYONES</p>
-                        </a>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="product-item">
-                        <a href="/PRODUCTOS/DAMA/shorts.html">
-                            <img src="https://i.ibb.co/CnR3M88/SHORT-PLAYERO.png" alt="Shorts y bermudas">
-                            <p>SHORTS Y BERMUDAS</p>
-                        </a>
-                    </div>
-                </div>
+        <!-- Product Grid -->
+        <div class="product-grid">
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/blusas.html">
+                    <img src="https://i.ibb.co/Gxq0Qf7/BLUSA-NEGRA-CON-FIGURAS.png" alt="Blusas">
+                    <p>BLUSAS</p>
+                </a>
             </div>
-
-            <!-- Carousel Arrows -->
-            <button onclick="moveCarousel('carousel1', -1)" class="carousel-arrow left">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button onclick="moveCarousel('carousel1', 1)" class="carousel-arrow right">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-        </div>
-
-        <!-- Button "Ver todo" -->
-        <div class="see-all-button">
-            <a href="/PRODUCTOS/DAMA/sudaderas.html">
-                <button>Ver todo</button>
-            </a>
-        </div>
-    </section>
-
-    <!-- Main Section 2-->
-    <section class="main-section section2">
-        <h1><span>SUDADERAS</span></h1>
-        <p>COLECCIÓN</p>
-
-        <!-- HTML principal con el carrusel -->
-        <div class="carousel-container">
-            <div id="carousel2" class="carousel-wrapper">
-                <!-- Aquí se cargarán los productos de productos.html -->
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/sudaderas.html">
+                    <img src="https://i.ibb.co/XLNHSvg/p2.png"  alt="Sudaderas y Suéteres">
+                    <p>SUDADERAS</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/pijamas.html">
+                    <img src="https://i.ibb.co/d5QR1q0/IMG-0649.jpg" alt="Pijamas">
+                    <p>PIJAMAS</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/mayones.html">
+                    <img src="https://i.ibb.co/8DN6Vqh/p6.png" alt="Pantalones Y Mayones">
+                    <p>PANTALONES</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/shorts.html">
+                    <img src="https://i.ibb.co/CnR3M88/SHORT-PLAYERO.png" alt="Shorts y bermudas">
+                    <p>SHORTS</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/faldas.html">
+                    <img src="https://i.ibb.co/MPkwD9g/FALDA-NEGRA-CON-DIAMANTES-1.png" alt="Faldas">
+                    <p>FALDAS</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/vestidos.html">
+                    <img src="https://i.ibb.co/LYmyhGF/VESTDO-NEGRO.png" alt="Vestidos">
+                    <p>VESTIDOS</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/conjuntos.html">
+                    <img src="https://i.ibb.co/g6KDFWf/CONJUNTO-MELON.jpg" alt="Conjuntos">
+                    <p>CONJUNTOS</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/calzado.html">
+                    <img src="https://i.ibb.co/pRnM1c5/7-1.jpg" alt="Calzado">
+                    <p>CALZADO</p>
+                </a>
+            </div>
+            <div class="product-item">
+                <a href="/PRODUCTOS/DAMA/accesorios.html">
+                    <img src="https://i.ibb.co/b6qSBZb/PERFUME-WOMAN.jpg" alt="Accesorios">
+                    <p>ACCESORIOS</p>
+                </a>
             </div>
         </div>
-
     </section>
-
-    <script>
-        function moveCarousel(carouselId, direction) {
-            const carousel = document.getElementById(carouselId);
-            const itemWidth = carousel.children[0].offsetWidth + 10; // Ancho de los productos + espacio
-            const visibleItems = 6; // Número de productos visibles
-            const totalItems = carousel.children.length;
-
-            // Índice actual del carrusel
-            let currentIndex = parseInt(carousel.dataset.index || 0);
-            currentIndex += direction;
-
-            // Validar los límites del desplazamiento
-            if (currentIndex < 0) currentIndex = 0;
-            if (currentIndex > totalItems - visibleItems) {
-                currentIndex = totalItems - visibleItems;
-            }
-
-            // Aplicar la transformación para desplazar los productos
-            carousel.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-            carousel.dataset.index = currentIndex;
-        }
-
-        // Función para cargar productos
-        function cargarProductos() {
-            fetch('/PRODUCTOS/DAMA/sudaderas.html')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error(`Error al cargar los productos: ${response.statusText}`);
-                    }
-                    return response.text();
-                })
-                .then(data => {
-                    // Crear un contenedor temporal para manipular el HTML de productos.html
-                    const tempContainer = document.createElement('div');
-                    tempContainer.innerHTML = data;
-
-                    // Seleccionar únicamente los elementos con la clase "product-card"
-                    const productos = tempContainer.querySelectorAll('.product-card');
-                    const limitedProducts = Array.from(productos).slice(0, 6); // Limitar a 6 productos
-
-                    if (productos.length === 0) {
-                        console.warn("No se encontraron productos con la clase 'product-card'.");
-                    }
-
-                    // Agregar cada "product-card" al carrusel
-                    const carouselContainer = document.getElementById('carousel2');
-                    limitedProducts.forEach(producto => {
-                        carouselContainer.appendChild(producto);
-                    });
-                })
-                .catch(error => {
-                    console.error('Error al cargar los productos:', error);
-                    const carouselContainer = document.getElementById('carousel2');
-                    carouselContainer.innerHTML = `<p>Error al cargar productos. Por favor, intenta más tarde.</p>`;
-                });
-        }
-
-        window.addEventListener('load', cargarProductos);
-    </script>
-
-    <div class="banner">
-        <div class="banner-content">
-            <span>¡Bienvenidos a nuestra tienda! Ofertas especiales todos los días. 🌟</span>
-        </div>
-    </div>
-
-    <div id="footer-container"></div> <!-- div para pie de pagina -->
-
-    <script>
-        /* script para header y footer */
+    <div id="footer-container"></div> <!-- div para encabezado -->
+    <script> /* script para header y footer */
+        // Función para cargar el header y footer desde un archivo externo
         async function cargarHeaderFooter() {
             try {
                 const respuesta = await fetch('/HEADER-FOOTER/header-footer.html');
                 if (!respuesta.ok) throw new Error('Error al cargar el archivo header-footer.html');
-
+    
                 const contenido = await respuesta.text();
                 const contenedorTemporal = document.createElement('div');
                 contenedorTemporal.innerHTML = contenido;
-
+    
                 const header = contenedorTemporal.querySelector('header');
                 const footer = contenedorTemporal.querySelector('footer');
-
+    
                 if (header) document.getElementById('header-container').appendChild(header);
                 if (footer) document.getElementById('footer-container').appendChild(footer);
+    
+                // Código para el menú de hamburguesa
+                const hamburger = document.querySelector('.hamburger');
+                const navLeft = document.querySelector('.nav-left');
+    
+                hamburger.addEventListener('click', () => {
+                    navLeft.classList.toggle('active');
+                });
             } catch (error) {
-                console.error('Error al cargar el header y footer:', error);
+                console.error('Error:', error);
             }
         }
-        window.onload = cargarHeaderFooter;
+    
+        // Llamada a la función para cargar y procesar el header y footer
+        cargarHeaderFooter();
     </script>
 </body>
 </html>

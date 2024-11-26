@@ -53,6 +53,9 @@
     </div>
 </section>
 
+<!-- <div id="footer-container"></div> div para pie de página -->
+
+
     <script> /* script para el carrusel */
 let currentIndex = 0;
 
@@ -66,7 +69,7 @@ function moveSlide(direction) {
     if (window.innerWidth <= 430) {
         visibleItems = 1; // Celulares
     } else if (window.innerWidth >= 768 && window.innerWidth <= 884) {
-        visibleItems = 2; // Tablets
+        visibleItems = 1; // Tablets
     }
 
     // Calcular nuevo índice
@@ -103,23 +106,18 @@ window.addEventListener('resize', () => {
             contenedorTemporal.innerHTML = contenido;
 
             const header = contenedorTemporal.querySelector('header');
-            const footer = contenedorTemporal.querySelector('footer');
+            // const footer = contenedorTemporal.querySelector('footer');
 
             if (header) document.getElementById('header-container').appendChild(header);
-            if (footer) document.getElementById('footer-container').appendChild(footer);
+            // if (footer) document.getElementById('footer-container').appendChild(footer);
 
-// Código para habilitar el menú de hamburguesa
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navLeft = document.querySelector('.nav-left');
+            // Código para el menú de hamburguesa
+            const hamburger = document.querySelector('.hamburger');
+            const navLeft = document.querySelector('.nav-left');
 
-    // Verifica que ambos elementos existan
-    if (hamburger && navLeft) {
-        hamburger.addEventListener('click', () => {
-            navLeft.classList.toggle('active');
-        });
-    }
-});
+            hamburger.addEventListener('click', () => {
+                navLeft.classList.toggle('active');
+            });
         } catch (error) {
             console.error('Error:', error);
         }

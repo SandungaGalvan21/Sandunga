@@ -1,7 +1,14 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+}
+
 /* Main Section */
 .main-section {
     text-align: center;
-    padding: 1rem; /* Aumenté el padding para más espacio */
+    padding: 1rem 1rem;
 }
 
 .main-section h1 {

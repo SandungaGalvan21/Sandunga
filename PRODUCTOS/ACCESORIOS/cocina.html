@@ -1,0 +1,110 @@
+<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COCINA</title>
+    <link rel="icon" href="/LOGO-IMG/MENTA.png" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="/PRODUCTOS/stylesprod.css"> <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="/HEADER-FOOTER/stylesheaderyfooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white font-sans">
+    <div id="header-container"></div>
+    
+    <!-- Product Grid 1 -->
+    <section class="container product-grid">
+        <h1 class="title">COCINA</h1>
+        <div class="grid">
+            <!-- Product Cards -->
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/y420Rcg/JABON-PARA-TRASTES.jpg" alt="Product 1" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Limpiador de Utencilios de Cocina</h3>
+                    <p class="product-price">$30.00</p>
+                    <p class="product-color">Color: AZUL</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/1mygbgZ/10-1.jpg" alt="Product 1" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Vatidor Electronico para Leche</h3>
+                    <p class="product-price">$30.00</p>
+                    <p class="product-color">Color: AZUL Y MORADO</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/Z6dkx0S/2-1.jpg"  alt="Product 2" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Bascula de comida</h3>
+                    <p class="product-price">$60.00</p>
+                    <p class="product-color">Color: BLANCO</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/q7QRbCW/d.jpg" alt="Product 1" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Paquetes de Cubiertos</h3>
+                    <p class="product-price">$50.00</p>
+                    <p class="product-color">Color: AMARILLO Y AZUL</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/4g8nWTV/9-1.jpg"  alt="Product 1" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Termo Mickey</h3>
+                    <p class="product-price">$80.00</p>
+                    <p class="product-color">Color: DORADO</p>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+    <div id="footer-container"></div>
+
+    <script> /* script para header y footer */
+        // Función para cargar el header y footer desde un archivo externo
+        async function cargarHeaderFooter() {
+            try {
+                const respuesta = await fetch('/HEADER-FOOTER/header-footer.html');
+                if (!respuesta.ok) throw new Error('Error al cargar el archivo header-footer.html');
+    
+                const contenido = await respuesta.text();
+                const contenedorTemporal = document.createElement('div');
+                contenedorTemporal.innerHTML = contenido;
+    
+                const header = contenedorTemporal.querySelector('header');
+                const footer = contenedorTemporal.querySelector('footer');
+    
+                if (header) document.getElementById('header-container').appendChild(header);
+                if (footer) document.getElementById('footer-container').appendChild(footer);
+    
+                // Código para el menú de hamburguesa
+                const hamburger = document.querySelector('.hamburger');
+                const navLeft = document.querySelector('.nav-left');
+    
+                hamburger.addEventListener('click', () => {
+                    navLeft.classList.toggle('active');
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    
+        // Llamada a la función para cargar y procesar el header y footer
+        cargarHeaderFooter();
+    </script>
+   
+</body>
+</html>

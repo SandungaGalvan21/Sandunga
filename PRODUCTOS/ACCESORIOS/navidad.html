@@ -1,0 +1,142 @@
+<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVIDAD</title>
+    <link rel="icon" href="/LOGO-IMG/MENTA.png" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="/PRODUCTOS/stylesprod.css"> <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="/HEADER-FOOTER/stylesheaderyfooter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white font-sans">
+   
+    <div id="header-container"></div>
+    <!-- Product Grid 1 -->
+    <div class="container product-grid">
+        <h1 class="title">NAVIDAD</h1>
+        <div class="grid">
+            <!-- Product Cards -->
+            <div class="product-card">
+                <div class="relative">
+                    <img src= "https://i.ibb.co/RjWDc4C/GORROS-NAVIDE-OS-3.jpg" alt="Product 1" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Gorro con Luz de Pino</h3>
+                    <p class="product-price">$35.00</p>
+                    <p class="product-color">Color: NEGRO, ROJO, VERDE Y BLANCO</p>
+                </div>
+            </div>
+        
+
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/C5zqGHX/GORROS-NAVIDE-OS-1.jpg"   alt="Product 2" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Gorro con luz de Santa y Venado</h3>
+                    <p class="product-price">$35.00</p>
+                    <p class="product-color">Color:NEGRO, ROJO, VERDE Y BLANCO</p>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/4tg6HqR/GORROS-NAVIDE-OS-2.jpg"  alt="Product 3" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Gorro con Luz de Muñeco de Nieve</h3>
+                    <p class="product-price">$35.00</p>
+                    <p class="product-color">Color: NEGRO, ROJO Y BLANCO</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/BLqTRJR/14-1.jpg"   alt="Product 1" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Juego de Baño Navideño</h3>
+                    <p class="product-price">$120.00</p>
+                    <p class="product-color">Color: VARIADO </p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/kxZwxkc/IMG-0687.jpg"  alt="Product 2" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Cortina de Baño Merry Chrismas</h3>
+                    <p class="product-price">$120.00</p>
+                    <p class="product-color">Color: ROJO</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="relative">
+                    <img src= "https://i.ibb.co/MpQycG1/IMG-0707.jpg" alt="Product 1" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Cortina de Baño de Muñecos de Nieve</h3>
+                    <p class="product-price">$120.00</p>
+                    <p class="product-color">Color: AZUL</p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="relative">
+                    <img src= "https://i.ibb.co/0XQQNpt/11-1.jpg" alt="Product 1" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Juego de Mantel y Fundas de Silla Navideño Santa Claus</h3>
+                    <p class="product-price">$380.00</p>
+                    <p class="product-color">Color: ROJO</p>
+                </div>
+            </div>
+   
+            <div class="product-card">
+                <div class="relative">
+                    <img src="https://i.ibb.co/c6YsDZq/IMG-0714.jpg"  alt="Product 2" class="product-image">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Juego de Mantel y Fundas de Silla Navideño Feliz Navidad</h3>
+                    <p class="product-price">$380.00</p>
+                    <p class="product-color">Color: AZUL</p>
+                </div>
+            </div>
+        
+        </div>
+
+            <div id="footer-container"></div>
+            <script> /* script para header y footer */
+                // Función para cargar el header y footer desde un archivo externo
+                async function cargarHeaderFooter() {
+                    try {
+                        const respuesta = await fetch('/HEADER-FOOTER/header-footer.html');
+                        if (!respuesta.ok) throw new Error('Error al cargar el archivo header-footer.html');
+            
+                        const contenido = await respuesta.text();
+                        const contenedorTemporal = document.createElement('div');
+                        contenedorTemporal.innerHTML = contenido;
+            
+                        const header = contenedorTemporal.querySelector('header');
+                        const footer = contenedorTemporal.querySelector('footer');
+            
+                        if (header) document.getElementById('header-container').appendChild(header);
+                        if (footer) document.getElementById('footer-container').appendChild(footer);
+            
+                        // Código para el menú de hamburguesa
+                        const hamburger = document.querySelector('.hamburger');
+                        const navLeft = document.querySelector('.nav-left');
+            
+                        hamburger.addEventListener('click', () => {
+                            navLeft.classList.toggle('active');
+                        });
+                    } catch (error) {
+                        console.error('Error:', error);
+                    }
+                }
+            
+                // Llamada a la función para cargar y procesar el header y footer
+                cargarHeaderFooter();
+            </script>
+   
+</body>
+</html>

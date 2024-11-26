@@ -1,0 +1,138 @@
+<html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAIR CARE</title>
+    <link rel="icon" href="/LOGO-IMG/MENTA.png" type="image/x-icon"> <!-- Favicon -->
+    <link rel="stylesheet" href="/HEADER-FOOTER/stylesheaderyfooter.css"> <!-- encabezado y pie de pagina -->
+    <link rel="stylesheet" href="/PRODUCTOS/stylesprod.css"> <!-- Enlace a la hoja de estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-white font-sans">
+    <div id="header-container"></div> <!-- div para encabezado -->     
+
+    <!-- Product Grid 1 -->
+    <section class="container product-grid">
+        <h1 class="title">HAIR CARE</h1>
+        <div class="grid">
+            <!-- Product Cards -->
+            <div class="product-card">
+                    <img src="https://i.ibb.co/TPZgQ0Y/IMG-9909.jpg" alt="Product 1" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Shampoo Anti-Caida Rapunzel</h3>
+                    <p class="product-price">$35.00</p>
+                    <p class="product-color">ROMERO CON EXTRACTO DE CEBOLLA Y ACIDO HIALURONICO</p>
+                    <div class="product-actions">
+                        <p class="product-price">CONT. NET.</p>
+                        <h3 class="product-name">500ml</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                    <img src="https://i.ibb.co/wcghMcZ/IMG-9895.jpg" alt="Product 2" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Shampoo De Bergamot</h3>
+                    <p class="product-price">$35.00</p>
+                    <p class="product-color">ANTICAÍDA CON THUJA Y MINOXIDIL</p>
+                    <div class="product-actions">
+                        <p class="product-price">CONT. NET.</p>
+                        <h3 class="product-name">500ml</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/Q6PmjF4/SHAMPOO-1.jpg" alt="Product 2" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Shampoo Chile & Bergamota</h3>
+                <p class="product-price">$35.00</p>
+                <p class="product-color">ANTICAÍDA CON THUJA Y MINOXIDIL</p>
+                <div class="product-actions">
+                    <p class="product-price">CONT. NET.</p>
+                    <h3 class="product-name">500ml</h3>
+                </div>
+            </div>
+        </div>
+
+
+            <div class="product-card">
+                    <img src="https://i.ibb.co/jrBRNrT/IMG-9910.jpg" alt="Product 2" class="product-image">
+                <div class="product-info">
+                    <h3 class="product-name">Óleo Nutritivo De Romero </h3>
+                    <p class="product-price">$25.00</p>
+                    <p class="product-color">AROMA HERBAL CON VITAMINAS, ÁCIDO CAFEICO Y ROSMARINICO</p>
+                    <div class="product-actions">
+                        <p class="product-price">CONT. NET.</p>
+                        <h3 class="product-name">125ml</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="https://i.ibb.co/7Vf62rG/TONICO-PARA-EL-CABELLOO.jpg" alt="Product 2" class="product-image">
+            <div class="product-info">
+                <h3 class="product-name">Karseell Gotas De Seda Tónico</h3>
+                <p class="product-price">$25.00</p>
+                <p class="product-color">CONTIENE ACEITES DE ARGÁN, COCO Y JOJOBA, MANTECA DE KAROTÉ, CERÁMICAS Y COLÁGENO.</p>
+                <div class="product-actions">
+                    <p class="product-price">CONT. NET.</p>
+                    <h3 class="product-name">250ml</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="https://i.ibb.co/9V3yTrq/CREMA-PEINAR.jpg" alt="Product 2" class="product-image">
+        <div class="product-info">
+            <h3 class="product-name">Olive Elastin</h3>
+            <p class="product-price">$38.00</p>
+            <p class="product-color">PROTECTION ROLLS NATURAL FLUFFY MOISTURIZING SHAPING</p>
+            <div class="product-actions">
+                <p class="product-price">CONT. NET.</p>
+                <h3 class="product-name">400ml</h3>
+            </div>
+        </div>
+    </div>
+
+
+        </div>
+    </section>
+    <div id="footer-container"></div> <!-- div para pie de página-->
+
+    <script> /* script para header y footer */
+        // Función para cargar el header y footer desde un archivo externo
+        async function cargarHeaderFooter() {
+            try {
+                const respuesta = await fetch('/HEADER-FOOTER/header-footer.html');
+                if (!respuesta.ok) throw new Error('Error al cargar el archivo header-footer.html');
+    
+                const contenido = await respuesta.text();
+                const contenedorTemporal = document.createElement('div');
+                contenedorTemporal.innerHTML = contenido;
+    
+                const header = contenedorTemporal.querySelector('header');
+                const footer = contenedorTemporal.querySelector('footer');
+    
+                if (header) document.getElementById('header-container').appendChild(header);
+                if (footer) document.getElementById('footer-container').appendChild(footer);
+    
+                // Código para el menú de hamburguesa
+                const hamburger = document.querySelector('.hamburger');
+                const navLeft = document.querySelector('.nav-left');
+    
+                hamburger.addEventListener('click', () => {
+                    navLeft.classList.toggle('active');
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+    
+        // Llamada a la función para cargar y procesar el header y footer
+        cargarHeaderFooter();
+    </script>
+
+</body>
+</html>

@@ -1,51 +1,52 @@
 .main-content {
-    margin-top: 80px; /* Esto añade espacio entre el encabezado fijo y el contenido principal */
-    padding: 0 2rem; /* Para dar algo de relleno a los lados del contenido */
-    flex: 0;
+    margin-top: 5rem; /* Asegurar que el título esté debajo del header */
+    padding: 0 1rem; /* Para dar algo de relleno a los lados del contenido */
 }
 
 .title {
     text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    margin-bottom: 2rem; /* Añade más espacio debajo de cada título */
-    margin-top: 7rem; /* Añade más espacio encima de cada título */
+    font-size: 1.75rem;
 }
 
 .paragraph {
-    margin-bottom: 3rem; /* Añade más espacio debajo del texto de introducción */
-    text-align: center;
-    font-size: 1.125rem; /* Tamaño de texto ligeramente mayor para mejorar la lectura */
-    line-height: 1.75rem; /* Ajusta el espacio entre líneas para mayor legibilidad */
+    text-align: justify;
+    margin-bottom: 2rem; /* Añade más espacio debajo del texto de introducción */
+    font-weight: 100;
+    font-size: 1.2rem;
+    line-height: 1.50rem; /* Ajusta el espacio entre líneas para mayor legibilidad */
 }
 
 .productos-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem; /* Aumenta el espacio entre los catálogos */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; /* Aumenta el espacio entre los catálogos */
     justify-items: center;
-    margin-bottom: 3rem; /* Añade más espacio debajo de los catálogos */
-}
-
-.catalogo {
-    border: 2px solid #eeeeee; /* Borde gris */
-    box-shadow: 0 4px 8px #0000001a; /* Sombra */
+    margin-bottom: 2rem; /* Añade más espacio debajo de los catálogos */
 }
 
 .catalogo img {
     width: 100%;
     height: auto;
-    max-height: 120px; /* Aumenta un poco la altura máxima de las imágenes */
+    border-radius: 1rem;
+    border: 2px solid #eeeeee;
+    box-shadow: 0 1px 3px #0000003b;
 }
 
 /* Estilos para pantallas pequeñas (Apple Watch y celulares) */
 @media (max-width: 430px) {
+    .productos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .title {
+        font-size: 2rem;
+    }    
+
 }
 
 /* Tablets */
-@media (min-width: 768px) and (max-width: 884px) {
-    .product-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+@media (min-width: 431px) and (max-width: 884px) {
+    .title {
+        font-size: 2rem;
+    }    
 }
