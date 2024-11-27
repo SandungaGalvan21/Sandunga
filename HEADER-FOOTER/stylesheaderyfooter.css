@@ -73,11 +73,6 @@ nav .nav-left .has-submenu:hover > a {
     color: #ffffff;
 }
 
-/* Estilos para los elementos con subcategorías */
-nav .nav-left .has-submenu {
-    position: relative;
-}
-
 /* Submenú oculto */
 nav .nav-left .submenu {
     transform: translate(-0.5rem, 1.44rem);
@@ -97,11 +92,15 @@ nav .nav-left .submenu {
 
 /* Mostrar el submenú al pasar el cursor */
 nav .nav-left .has-submenu:hover .submenu {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
 }
 
-/* Estilos para los enlaces dentro del submenú */
+/* Estilos para los enlaces del submenú */
+nav .nav-left .submenu li {
+    margin: 0.25rem 0; /* Espaciado entre elementos */
+}
+
 nav .nav-left .submenu li a {
     color: inherit;
     text-decoration: none;
@@ -110,8 +109,8 @@ nav .nav-left .submenu li a {
 }
 
 nav .nav-left .submenu li a:hover {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #000;
+    color: #fff;
 }
 
 /* Logo en el centro */
