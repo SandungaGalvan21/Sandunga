@@ -253,7 +253,6 @@ nav .flex a:hover {
         transform: translate(-0.5rem, 0.25rem);
     }
 
-
     .logo {
         display: flex;
         transform: translateX(-1rem);
@@ -277,6 +276,14 @@ nav .flex a:hover {
         padding: 0 1rem;
     }
 
+    .space-y-4 li {
+        font-size: 3vw;
+    }    
+
+    .flex.justify-center a {
+        font-size: 4vw;
+    }
+    
     .flex.justify-center {
         display: flex;
         justify-content: center;
