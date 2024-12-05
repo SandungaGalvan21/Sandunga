@@ -285,10 +285,7 @@ nav .flex a:hover {
     }
     
     .flex.justify-center {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transform: translateY(-60%);
+        transform: translateY(-100%);
     }
 }
 
