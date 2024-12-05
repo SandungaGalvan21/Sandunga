@@ -239,6 +239,10 @@ nav .flex a:hover {
         gap: 0.5rem;
         justify-content: flex-end;
     }
+
+    nav .flex a {
+        font-size: 6vw;
+    }
     
     .hamburger {
         display: flex;
