@@ -19,11 +19,11 @@
     <div id="header-container"></div> <!-- div para encabezado -->
     <!-- Main Section -->
     <section class="main-section">
-        <h1><span>DAMA</span></h1>
+        <h1>DAMA</h1>
         <p>COLECCIÓN</p>
 
-        <!-- Product Grid -->
-        <div class="product-grid">
+        <div class="carousel">
+                <div class="carousel-inner">
             <div class="product-item">
                 <a href="/PRODUCTOS/DAMA/blusas.html">
                     <img src="https://i.ibb.co/Gxq0Qf7/BLUSA-NEGRA-CON-FIGURAS.png" alt="Blusas">
@@ -84,9 +84,66 @@
                     <p>ACCESORIOS</p>
                 </a>
             </div>
+                    <!-- Controles del carrusel -->
+        <div class="carousel-controls">
+            <button class="carousel-control-prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="carousel-control-next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
         </div>
     </section>
+
+    <script> /* script para el carrusel */
+        let currentIndex = 0;
+        
+        function moveSlide(direction) {
+            const items = document.querySelectorAll('.main-section .carousel .carousel-inner .product-item');
+            const totalItems = items.length;
+            const carouselInner = document.querySelector('.carousel-inner');
+        
+            // Calcular cantidad visible según el ancho de la ventana
+            let visibleItems = 6; // Predeterminado para computadoras
+            if (window.innerWidth <= 430) {
+                visibleItems = 1; // Celulares
+            } else if (window.innerWidth >= 768 && window.innerWidth <= 884) {
+                visibleItems = 1; // Tablets
+            }
+        
+            // Calcular nuevo índice
+            currentIndex += direction;
+        
+            // Limitar el índice
+            if (currentIndex < 0) {
+                currentIndex = 0;
+            } else if (currentIndex > totalItems - visibleItems) {
+                currentIndex = totalItems - visibleItems;
+            }
+        
+            // Mover carrusel
+            const itemWidth = carouselInner.offsetWidth / visibleItems;
+            carouselInner.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        }
+        
+        // Ajustar el carrusel al cambiar el tamaño de la ventana
+        window.addEventListener('resize', () => {
+            currentIndex = 0; // Reinicia al inicio al redimensionar
+            document.querySelector('.carousel-inner').style.transform = `translateX(0)`;
+        });
+            </script>
+        
+        <div class="banner">
+            <div class="banner-content">
+                <span>¡Bienvenidos a nuestra tienda! Ofertas especiales todos los días. 🌟</span>
+                <span>¡Bienvenidos a nuestra tienda! Ofertas especiales todos los días. 🌟</span>
+                <span>¡Bienvenidos a nuestra tienda! Ofertas especiales todos los días. 🌟</span>
+                <span>¡Bienvenidos a nuestra tienda! Ofertas especiales todos los días. 🌟</span>
+                <span>¡Bienvenidos a nuestra tienda! Ofertas especiales todos los días. 🌟</span>
+                <span>¡Bienvenidos a nuestra tienda! Ofertas especiales todos los días. 🌟</span>
+            </div>
+        </div>
+
     <div id="footer-container"></div> <!-- div para encabezado -->
+
     <script> /* script para header y footer */
         // Función para cargar el header y footer desde un archivo externo
         async function cargarHeaderFooter() {

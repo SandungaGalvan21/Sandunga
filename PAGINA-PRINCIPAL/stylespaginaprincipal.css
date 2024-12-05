@@ -8,7 +8,6 @@
     display: flex;
     align-items: center; /* Centrar verticalmente el contenido */
     box-sizing: border-box; /* Incluye padding en las dimensiones del carrusel */
-    background-color: #f9f9f9; /* Opcional: añade un fondo para resaltar los bordes */
 }
 
 .carousel-inner {
@@ -44,8 +43,7 @@ section div.relative a img {
 
 section div.relative h2 {
             color: #ffffff;
-            font-weight: 1000; /* Similar al font-bold de Tailwind */ 
-            font-size: 2.5rem;
+            font-size: 3.5vw;
             position: absolute;
             bottom: 10px;
             left: 50%;

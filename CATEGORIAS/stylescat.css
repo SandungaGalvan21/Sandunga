@@ -1,9 +1,54 @@
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-
+/* Ajustes generales del carrusel */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%; /* Reduce el ancho total para respetar el padding */
+    height: 100%;
+    display: flex;
+    align-items: center; /* Centrar verticalmente el contenido */
+    box-sizing: border-box; /* Incluye padding en las dimensiones del carrusel */
 }
+
+.carousel-inner {
+    display: flex;
+    flex-wrap: nowrap; /* Asegura que los elementos no se ajusten en múltiples filas */
+    width: 100%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product-item {
+            min-width: 17%; /* Cada producto ocupa un tercio del ancho del carrusel */
+            height: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        section div.product-item {
+            position: relative;
+        }
+
+                /* Controles de navegación */
+                .carousel-controls {
+                    position: absolute;
+                    top: 50%;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    transform: translateY(-50%);
+                }
+        
+                .carousel-control-prev, .carousel-control-next {
+                    padding: 10px;
+                    border: color(black);
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+        
+
+
 
 /* Main Section */
 .main-section {
@@ -12,103 +57,15 @@
 }
 
 .main-section h1 {
-    letter-spacing: -0.05em;
-    font-size: 4rem; /* Ajusté el tamaño del título */
-    font-weight: 700; /* Un poco menos pesado para más legibilidad */
-    margin-bottom: -1rem; /* Espacio debajo del título */
+    font-size: 7vw; /* Ajusté el tamaño del título */
+    margin-bottom: -1.5rem; /* Espacio debajo del título */
 }
 
 .main-section p {
-    font-size: 1rem; /* Ajuste de tamaño de texto */
-    margin: 0 auto; /* Centrar el texto */
-    padding: 1rem; /* Más espacio alrededor del texto */
+    font-size: 1.5vw; /* Ajuste de tamaño de texto */
 }
 
-/* Carrusel contenedor con 6 productos visibles */
-.carousel-container {
-    display: flex;
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 2rem; /* Añadir margen para separación */
-}
 
-.carousel-wrapper {
-    display: flex;
-    transition: transform 0.3s ease;
-}
-
-/* Ajustar la cantidad de productos visibles (6 productos) */
-.carousel-item {
-    flex: 0 0 calc(100% / 6); /* Cada producto ocupa 1/6 del contenedor */
-    box-sizing: border-box;
-    padding: 0 0.25rem; /* Espacio entre los items */
-}
-
-/* Flechas del carrusel */
-.carousel-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
-}
-
-.carousel-arrow.left {
-    left: 10px;
-}
-
-.carousel-arrow.right {
-    right: 10px;
-}
-
-/* Estilos para los productos dentro del carrusel */
-.product-item {
-    padding: 1rem;
-}
-
-.product-item img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* Para asegurar que la imagen se ajuste sin distorsiones */
-    display: block; /* Elimina cualquier espacio blanco extraño */
-    margin: 0 auto; /* Centra la imagen horizontalmente */
-    border: 2px solid #eeeeee; /* Borde gris */
-    box-shadow: 0 4px 8px #0000001a; /* Sombra */
-}
-
-.product-item p {
-    text-align: center; /* Centra el texto horizontalmente */
-    margin-top: 1rem; /* Agrega espacio entre la imagen y el texto */
-    font-weight: bold; /* Opcional: dar más peso al texto */
-}
-
-.product-item a {
-    margin-top: 0rem;
-    font-size: 1rem; /* Ajusta el tamaño del texto */
-    font-weight: 100; /* Mantén o ajusta el peso de la fuente */
-    text-align: center;
-    color: #333;
-    text-decoration: none; /* Asegúrate de que no haya subrayado */
-}
-
-/* Estilo para el botón "ver todo" */
-.product-item .view-all-btn {
-    display: inline-block;
-    margin-top: 1rem;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.product-item .view-all-btn:hover {
-    background-color: #0056b3;
-}
 
 /* Estilos del banner */
 .banner {

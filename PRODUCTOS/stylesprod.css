@@ -3,34 +3,48 @@
     padding: 1rem 1rem;
 }
 
-.title {
-    font-size: 3rem;
-    font-weight: 700;
+.separacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Alinear los títulos al centro */
+}
+
+.antesdeltitulo {
+    margin-top: 17vh; /* Asegurar que el título esté debajo del header */
+    font-size: 2.5rem;
+    font-weight: 500;
     text-align: center;
-    margin-top: 10vh; /* Asegurar que el título esté debajo del header */
+    margin-bottom: 1rem; /* Separación entre el título y otros elementos */
+}
+
+.title {
+    font-size: 4.5rem;
+    text-align: center;
+    gap: 1rem;
+    margin-bottom: 2rem; /* Añadir separación entre la grid y los títulos */
 }
 
 /* Grid y tarjetas de producto */
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Mantiene la adaptabilidad */
+    grid-template-columns: repeat(4, 1fr); /* Mostrar 4 productos por fila */
     justify-items: center; /* Centra los elementos dentro de la rejilla */
     gap: 1rem;
 }
 
 .product-card {
-    width: 100%;
     border-radius: 1rem;
     border: 2px solid #eeeeee;
     box-shadow: 0 1px 3px #0000003b;
     overflow: hidden;
     position: relative;
+    /* Esto hará que las tarjetas tengan una altura flexible */
+    min-height: 100%; /* Ajusta la altura mínima si es necesario */
 }
 
 .product-image {
     width: 100%;
-    height: auto;
-    object-fit: cover; /* Asegurar que la imagen se ajuste sin distorsiones */
+    object-fit: cover; /* Para asegurar que la imagen se ajuste sin distorsiones */
     display: block; /* Elimina cualquier espacio blanco extraño */
     margin: 0 auto; /* Centra la imagen horizontalmente */
 }
@@ -39,10 +53,13 @@
     display: flex;
     flex-direction: column;
     font-weight: 700;
-    font-size: 2.4vh;
+    font-size: 14px;
     gap: 0.25rem;
     padding: 1em; /* Añadido padding para despegar la información del borde */
-    background-color: #eeeeee;
+    background-color: #eeeeee; /* Fondo gris claro para la sección de la información */
+    /* El contenido se ajusta automáticamente */
+    flex-grow: 0; /* No crece más allá de su contenido */
+    height: 100%; /* La altura se ajusta al contenido */
 }
 
 .product-name,
@@ -57,7 +74,8 @@
 .product-color,
 .product-actions,
 .product-actions h3 {
-    font-weight: 500;
+    font-weight: 800;
+    color: #3B3B3B;
 }
 
 .product-actions {
@@ -66,7 +84,7 @@
 }
 
 .product-actions h3 {
-    font-size: 2.4vh;
+    font-size: 14px;
 }
 
 /* Media Queries para pantallas responsivas */
