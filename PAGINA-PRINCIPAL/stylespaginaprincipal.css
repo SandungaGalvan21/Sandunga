@@ -122,14 +122,11 @@ section div.relative h2 {
     }
 
     section div.relative h2 {
-        font-size: 11.5vw;
+        font-size: 8vw;
     }
 
 section div.relative a img {
     width: 95vw; /* Usar vw para que el ancho se ajuste automáticamente al tamaño de la ventana */
-    height: auto; /* Mantener la proporción de la imagen */
-    min-height: 100%; /* Garantiza que la imagen no se deforme */
-    object-fit: cover; /* Para que la imagen se ajuste correctamente sin perder proporción */
 }
 
     .carousel-controls {
