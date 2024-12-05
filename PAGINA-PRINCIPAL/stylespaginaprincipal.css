@@ -94,6 +94,10 @@ section div.relative h2 {
     .carousel-controls {
         display: none; /* Ocultar los botones de navegación */
     }
+
+    section div.relative h2 {
+        font-size: 8vw;
+    }
 }
 
 /* Estilos para tablets */
