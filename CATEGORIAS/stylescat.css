@@ -1,54 +1,67 @@
-/* Ajustes generales del carrusel */
+/* General styles for the carousel */
 .carousel {
     position: relative;
     overflow: hidden;
-    width: 100%; /* Reduce el ancho total para respetar el padding */
-    height: 100%;
-    display: flex;
-    align-items: center; /* Centrar verticalmente el contenido */
-    box-sizing: border-box; /* Incluye padding en las dimensiones del carrusel */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .carousel-inner {
     display: flex;
-    flex-wrap: nowrap; /* Asegura que los elementos no se ajusten en múltiples filas */
+    flex-wrap: nowrap;
     width: 100%;
-            transition: transform 0.3s ease-in-out;
-        }
+    transition: transform 0.3s ease-in-out;
+}
 
-        .product-item {
-            min-width: 17%; /* Cada producto ocupa un tercio del ancho del carrusel */
-            height: 100%;
-            box-sizing: border-box;
-            padding: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+.product-item {
+    min-width: calc(100% / 6); /* Cada producto ocupa un sexto del ancho */
+    height: auto;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        section div.product-item {
-            position: relative;
-        }
+.product-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
 
-                /* Controles de navegación */
-                .carousel-controls {
-                    position: absolute;
-                    top: 50%;
-                    width: 100%;
-                    display: flex;
-                    justify-content: space-between;
-                    transform: translateY(-50%);
-                }
-        
-                .carousel-control-prev, .carousel-control-next {
-                    padding: 10px;
-                    border: color(black);
-                    cursor: pointer;
-                    font-size: 20px;
-                }
-        
+.product-item p {
+    font-size: 1.25vw;
+    margin: 0;
+}
 
+/* Carousel controls */
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
 
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    pointer-events: all;
+    transition: background-color 0.3s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
 
 /* Main Section */
 .main-section {
@@ -61,8 +74,10 @@
     margin-bottom: -1.5rem; /* Espacio debajo del título */
 }
 
-.main-section p {
+.product-item a {
     font-size: 1.5vw; /* Ajuste de tamaño de texto */
+    color: inherit;
+    text-decoration: none;
 }
 
 
