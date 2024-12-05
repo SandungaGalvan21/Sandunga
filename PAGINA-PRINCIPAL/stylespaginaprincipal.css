@@ -18,7 +18,7 @@
         }
 
         .relative {
-            min-width: 33.33%; /* Cada producto ocupa un tercio del ancho del carrusel */
+            min-width: calc(100% / 3); /* Cada producto ocupa un sexto del ancho */
             height: 100%;
             box-sizing: border-box;
             padding: 10px;
