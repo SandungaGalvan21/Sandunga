@@ -216,7 +216,7 @@ nav .flex a:hover {
     }    
 
     nav .nav-left {
-        font-size: 3vw;
+        font-size: 4vw;
         display: none;
         flex-direction: column;
         position: absolute;
