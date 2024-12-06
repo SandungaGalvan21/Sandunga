@@ -98,7 +98,7 @@
     }
 
     .product-item {
-        margin-bottom: 0.5rem; /* Reduce la separación vertical entre productos */
+        margin-bottom: 1rem; /* Reduce la separación vertical entre productos */
     }
 
     .product-item img {
