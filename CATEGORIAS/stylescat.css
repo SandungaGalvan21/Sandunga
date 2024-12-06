@@ -83,7 +83,7 @@
 /* Estilos para pantallas pequeñas (teléfonos) */
 @media (max-width: 430px) {
     .main-section p {
-        font-size: 3.5vw; /* Ajusté el tamaño del título */
+        font-size: 4vw; /* Ajusté el tamaño del título */
         margin-bottom: -1.8rem; /* Espacio debajo del título */
     }
 
