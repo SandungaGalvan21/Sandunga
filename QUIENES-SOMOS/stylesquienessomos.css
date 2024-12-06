@@ -5,15 +5,14 @@
 
 .title {
     text-align: center;
-    font-size: 1.75rem;
+    font-size: 3vw;
 }
 
 .paragraph {
     text-align: justify;
     margin-bottom: 2rem; /* Añade más espacio debajo del texto de introducción */
-    font-weight: 100;
-    font-size: 1.2rem;
-    line-height: 1.50rem; /* Ajusta el espacio entre líneas para mayor legibilidad */
+    font-size: 1.25vw;
+    line-height: 1.25rem; /* Ajusta el espacio entre líneas para mayor legibilidad */
 }
 
 .productos-grid {
@@ -39,14 +38,23 @@
     }
 
     .title {
-        font-size: 2rem;
-    }    
-
+        font-size: 6vw;
+    }
+    
+    .paragraph {
+        font-size: 4vw;
+    }
 }
 
 /* Tablets */
 @media (min-width: 431px) and (max-width: 884px) {
     .title {
-        font-size: 2rem;
-    }    
+        font-size: 6vw;
+    }
+    
+    .paragraph {
+        font-size: 3vw;
+        line-height: 1.6rem; /* Ajusta el espacio entre líneas para mayor legibilidad */
+
+    }
 }
