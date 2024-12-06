@@ -1,7 +1,7 @@
 /* Main Section */
 .main-section {
     text-align: center;
-    margin-top: 60px; /* Espacio debajo del header y centra horizontalmente */
+    margin-top: 80px; /* Espacio debajo del header y centra horizontalmente */
 }
 
 .main-section h1 {
@@ -9,67 +9,39 @@
     margin-bottom: -1.5rem; /* Espacio debajo del título */
 }
 
-/* General styles for the carousel */
-.carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    box-sizing: border-box;
+/* Contenedor de la cuadrícula */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 6 columnas */
+    gap: 1rem; /* Espacio entre los elementos */
+    padding: 1rem;
 }
 
-.carousel-inner {
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    transition: transform 0.3s ease-in-out;
-}
-
+/* Ajustes para los productos */
 .product-item {
-    min-width: calc(100% / 6); /* Cada producto ocupa un sexto del ancho */
-    height: 100%;
-    box-sizing: border-box;
-    padding: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    text-align: center;
 }
 
 .product-item img {
     width: 100%;
-    height: 100%; /* Altura completa del contenedor */
-    object-fit: cover; /* Asegura que la imagen mantenga proporción mientras llena el contenedor */
-    border-radius: 1rem;
-    border: 2px solid #eeeeee;
-    box-shadow: 0 1px 3px #0000003b;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .product-item a {
-    font-size: 1.5vw; /* Ajuste de tamaño de texto */
-    color: inherit;
+    font-size: 1rem;
+    color: #333;
     text-decoration: none;
+    margin-top: 0.5rem;
 }
-
-/* Carousel controls */
-.carousel-controls {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    padding: 10px;
-    border: color(black);
-    cursor: pointer;
-    font-size: 20px;
-}
-
 /* Estilos del banner */
 .banner {
-    width: 100%;
+    width: 97%;
     overflow: hidden; /* Oculta el contenido que se desplaza fuera del contenedor */
     background-color: #F8ED57;
     padding: 1.5vw;
@@ -96,15 +68,16 @@
     }
 }
 
-/* Responsividad */
-@media (max-width: 768px) {
-    .carousel-item {
-        flex: 0 0 calc(100% / 3); /* Mostrar 3 productos en pantallas medianas */
+/* Estilos para pantallas pequeñas (teléfonos) */
+@media (max-width: 430px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para móviles */
     }
 }
 
-@media (max-width: 480px) {
-    .carousel-item {
-        flex: 0 0 100%; /* Mostrar 1 producto en pantallas muy pequeñas */
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 884px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas para móviles */
     }
 }

@@ -18,117 +18,74 @@
 <body>
     <div id="header-container"></div> <!-- div para encabezado -->
     <!-- Main Section -->
-    <section class="main-section">
-        <h1>DAMA</h1>
-        <p>COLECCIÓN</p>
+<section class="main-section">
+    <h1>DAMA</h1>
+    <p>COLECCIÓN</p>
 
-        <!-- Contenedor del carrusel -->
-        <div class="carousel">
-            <div class="carousel-inner">
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/blusas.html">
-                        <img src="https://i.ibb.co/Gxq0Qf7/BLUSA-NEGRA-CON-FIGURAS.png" alt="Blusas">
-                        <p>BLUSAS</p>
-                    </a>
-                </div>
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/sudaderas.html">
-                        <img src="https://i.ibb.co/XLNHSvg/p2.png"  alt="Sudaderas y Suéteres">
-                        <p>SUETERES</p>
-                    </a>
-                </div>
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/pijamas.html">
-                        <img src="https://i.ibb.co/d5QR1q0/IMG-0649.jpg" alt="Pijamas">
-                        <p>PIJAMAS</p>
-                    </a>
-                </div>
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/mayones.html">
-                        <img src="https://i.ibb.co/8DN6Vqh/p6.png" alt="Pantalones Y Mayones">
-                        <p>PANTALONES</p>
-                    </a>
-                </div>
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/shorts.html">
-                        <img src="https://i.ibb.co/CnR3M88/SHORT-PLAYERO.png" alt="Shorts y bermudas">
-                        <p>SHORTS</p>
-                    </a>
-                </div>
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/faldas.html">
-                        <img src="https://i.ibb.co/MPkwD9g/FALDA-NEGRA-CON-DIAMANTES-1.png" alt="Faldas">
-                        <p>FALDAS</p>
-                    </a>
-                </div>
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/vestidos.html">
-                        <img src="https://i.ibb.co/LYmyhGF/VESTDO-NEGRO.png" alt="Vestidos">
-                        <p>VESTIDOS</p>
-                    </a>
-                </div>
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/conjuntos.html">
-                        <img src="https://i.ibb.co/g6KDFWf/CONJUNTO-MELON.jpg" alt="Conjuntos">
-                        <p>CONJUNTOS</p>
-                    </a>
-                </div>
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/calzado.html">
-                        <img src="https://i.ibb.co/pRnM1c5/7-1.jpg" alt="Calzado">
-                        <p>CALZADO</p>
-                    </a>
-                </div>
-                <div class="product-item">
-                    <a href="/PRODUCTOS/DAMA/accesorios.html">
-                        <img src="https://i.ibb.co/b6qSBZb/PERFUME-WOMAN.jpg" alt="Accesorios">
-                        <p>ACCESORIOS</p>
-                    </a>
-                </div>
-            </div>
+    <!-- Contenedor para el grid -->
+    <div class="product-grid">
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/blusas.html">
+                <img src="https://i.ibb.co/Gxq0Qf7/BLUSA-NEGRA-CON-FIGURAS.png" alt="Blusas">
+                <p>BLUSAS</p>
+            </a>
         </div>
-
-        <!-- Controles del carrusel fuera del contenedor del carrusel -->
-        <div class="carousel-controls">
-            <button class="carousel-control-prev" onclick="moveSlide(-1)">&#10094;</button>
-            <button class="carousel-control-next" onclick="moveSlide(1)">&#10095;</button>
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/sudaderas.html">
+                <img src="https://i.ibb.co/XLNHSvg/p2.png"  alt="Sudaderas y Suéteres">
+                <p>SUETERES</p>
+            </a>
         </div>
-
-    </section>
-
-    <script>
-        let currentIndex = 0;
-
-        function moveSlide(direction) {
-            const items = document.querySelectorAll('.carousel-inner .product-item');
-            const carouselInner = document.querySelector('.carousel-inner');
-            const totalItems = items.length;
-
-            let visibleItems = 6; // Por defecto, para pantallas grandes
-            if (window.innerWidth <= 768) {
-                visibleItems = 2; // Para pantallas pequeñas
-            }
-            if (window.innerWidth <= 480) {
-                visibleItems = 1; // Para pantallas muy pequeñas
-            }
-
-            currentIndex += direction;
-
-            if (currentIndex < 0) {
-                currentIndex = 0;
-            } else if (currentIndex > totalItems - visibleItems) {
-                currentIndex = totalItems - visibleItems;
-            }
-
-            const itemWidth = carouselInner.offsetWidth / visibleItems;
-            carouselInner.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
-        }
-
-        window.addEventListener('resize', () => {
-            currentIndex = 0;
-            document.querySelector('.carousel-inner').style.transform = `translateX(0)`;
-        });
-    </script>
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/pijamas.html">
+                <img src="https://i.ibb.co/d5QR1q0/IMG-0649.jpg" alt="Pijamas">
+                <p>PIJAMAS</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/mayones.html">
+                <img src="https://i.ibb.co/8DN6Vqh/p6.png" alt="Pantalones Y Mayones">
+                <p>PANTALONES</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/shorts.html">
+                <img src="https://i.ibb.co/CnR3M88/SHORT-PLAYERO.png" alt="Shorts y bermudas">
+                <p>SHORTS</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/faldas.html">
+                <img src="https://i.ibb.co/MPkwD9g/FALDA-NEGRA-CON-DIAMANTES-1.png" alt="Faldas">
+                <p>FALDAS</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/vestidos.html">
+                <img src="https://i.ibb.co/LYmyhGF/VESTDO-NEGRO.png" alt="Vestidos">
+                <p>VESTIDOS</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/conjuntos.html">
+                <img src="https://i.ibb.co/g6KDFWf/CONJUNTO-MELON.jpg" alt="Conjuntos">
+                <p>CONJUNTOS</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/calzado.html">
+                <img src="https://i.ibb.co/pRnM1c5/7-1.jpg" alt="Calzado">
+                <p>CALZADO</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="/PRODUCTOS/DAMA/accesorios.html">
+                <img src="https://i.ibb.co/b6qSBZb/PERFUME-WOMAN.jpg" alt="Accesorios">
+                <p>ACCESORIOS</p>
+            </a>
+        </div>
+    </div>
+</section>
         
         <div class="banner">
             <div class="banner-content">
