@@ -27,7 +27,7 @@
 /* Grid y tarjetas de producto */
 .grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Mostrar 4 productos por fila */
+    grid-template-columns: repeat(5, 1fr); /* Mostrar 4 productos por fila */
     justify-items: center; /* Centra los elementos dentro de la rejilla */
     gap: 1rem;
 }
@@ -85,6 +85,35 @@
 
 .product-actions h3 {
     font-size: 14px;
+}
+
+/* Estilos del banner */
+.banner {
+    width: 97%;
+    overflow: hidden; /* Oculta el contenido que se desplaza fuera del contenedor */
+    background-color: #F8ED57;
+    padding: 1.5vw;
+}
+
+.banner-content {
+    display: inline-block;
+    white-space: nowrap; /* Evita que el texto se divida en líneas */
+    animation: slide-left 15s linear infinite; /* Animación hacia la izquierda */
+}
+
+/* Ajuste de ancho para permitir que el texto se repita */
+.banner-content span {
+    padding-right: 2rem; /* Espacio entre las repeticiones */
+}
+
+/* Animación hacia la izquierda */
+@keyframes slide-left {
+    0% {
+        transform: translateX(0); /* Comienza en la posición inicial */
+    }
+    100% {
+        transform: translateX(-50%); /* Se mueve hacia la izquierda la mitad del ancho */
+    }
 }
 
 /* Media Queries para pantallas responsivas */
