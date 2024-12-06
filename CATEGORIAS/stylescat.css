@@ -6,7 +6,12 @@
 
 .main-section h1 {
     font-size: 7vw; /* Ajusté el tamaño del título */
-    margin-bottom: -1.5rem; /* Espacio debajo del título */
+    margin-bottom: -2rem; /* Espacio debajo del título */
+}
+
+.main-section p {
+    font-size: 1.6vw; /* Ajusté el tamaño del título */
+    margin-bottom: -0.25rem; /* Espacio debajo del título */
 }
 
 /* Contenedor de la cuadrícula */
