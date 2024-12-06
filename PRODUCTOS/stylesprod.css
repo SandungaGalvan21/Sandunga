@@ -111,14 +111,13 @@
 @media (max-width: 430px) {
     .antesdeltitulo {
         font-size: 4vw; /* Ajusté el tamaño del título */
-        margin-bottom: -1.8rem; /* Espacio debajo del título */
+        margin-bottom: -4rem; /* Espacio debajo del título */
     }
     
     .title {
-        font-size: 7vw; /* Ajusté el tamaño del título */
-        text-align: center;
-        gap: 1rem;
-        margin-bottom: -1rem; /* Espacio debajo del título */
+        margin-top: 60px; /* Asegurar que el título esté debajo del header */
+        font-size: 9vw; /* Ajusté el tamaño del título */
+        margin-bottom: -0.5rem; /* Espacio debajo del título */
     }
     
     .grid {
@@ -130,10 +129,12 @@
         width: 100%;
     }
 
-    .title {
-        font-size: 2rem;
-        text-align: center;
-        margin-top: 60px; /* Asegurar que el título esté debajo del header */
+    .product-info {
+        font-size: 3.5vw;
+    }
+    
+    .product-actions h3 {
+        font-size: 4.25vw;
     }
 }
 
