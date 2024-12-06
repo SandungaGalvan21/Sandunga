@@ -5,7 +5,7 @@
 }
 
 .antesdeltitulo {
-    margin-top: 80px; /* Espacio debajo del header y centra horizontalmente */
+    margin-top: 90px; /* Espacio debajo del header y centra horizontalmente */
     font-size: 1.6vw; /* Ajusté el tamaño del título */
     text-align: center;
     margin-bottom: -1.8rem; /* Espacio debajo del título */
@@ -15,7 +15,7 @@
     font-size: 7vw; /* Ajusté el tamaño del título */
     text-align: center;
     gap: 1rem;
-    margin-bottom: -0.25rem; /* Espacio debajo del título */
+    margin-bottom: -1rem; /* Espacio debajo del título */
 }
 
 /* Grid y tarjetas de producto */
@@ -25,7 +25,6 @@
     justify-items: center; /* Centra los elementos dentro de la rejilla */
     gap: 1rem;
     padding: 1rem;
-
 }
 
 .product-card {
@@ -48,8 +47,7 @@
 .product-info {
     display: flex;
     flex-direction: column;
-    font-weight: 700;
-    font-size: 14px;
+    font-size: 1vw;
     gap: 0.25rem;
     padding: 1em; /* Añadido padding para despegar la información del borde */
     background-color: #eeeeee; /* Fondo gris claro para la sección de la información */
@@ -66,21 +64,17 @@
     margin: 0; /* Elimina márgenes innecesarios */
 }
 
-.product-name,
-.product-color,
-.product-actions,
-.product-actions h3 {
-    font-weight: 800;
-    color: #3B3B3B;
-}
-
 .product-actions {
     display: flex;
     gap: 0.5rem;
 }
 
 .product-actions h3 {
-    font-size: 14px;
+    font-size: 1.19vw;
+}
+
+.product-price {
+    color: black
 }
 
 /* Estilos del banner */
