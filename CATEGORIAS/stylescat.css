@@ -4,14 +4,14 @@
     margin-top: 80px; /* Espacio debajo del header y centra horizontalmente */
 }
 
-.main-section h1 {
-    font-size: 7vw; /* Ajusté el tamaño del título */
-    margin-bottom: -2rem; /* Espacio debajo del título */
-}
-
 .main-section p {
     font-size: 1.6vw; /* Ajusté el tamaño del título */
-    margin-bottom: -0.25rem; /* Espacio debajo del título */
+    margin-bottom: -5.5rem; /* Espacio debajo del título */
+}
+
+.main-section h1 {
+    font-size: 7vw; /* Ajusté el tamaño del título */
+    margin-bottom: -0rem; /* Espacio debajo del título */
 }
 
 /* Contenedor de la cuadrícula */
@@ -20,7 +20,6 @@
     grid-template-columns: repeat(5, 1fr); /* 6 columnas */
     gap: 1rem; /* Espacio entre los elementos */
     padding: 1rem;
-    margin-bottom: 0.5rem;
 }
 
 /* Ajustes para los productos */
@@ -29,6 +28,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 4.5rem;
 }
 
 .product-item img {
@@ -82,28 +82,29 @@
 
 /* Estilos para pantallas pequeñas (teléfonos) */
 @media (max-width: 430px) {
+    .main-section p {
+        font-size: 2.5vw; /* Ajusté el tamaño del título */
+        margin-bottom: -1.8rem; /* Espacio debajo del título */
+    }
+
+    .main-section h1 {
+        font-size: 8vw; /* Ajusté el tamaño del título */
+        margin-bottom: -1rem; /* Espacio debajo del título */
+    }
+
     .product-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas para móviles */
+        margin-bottom: 0.5rem;
     }
 
     .product-item {
-        margin-bottom: -2rem; /* Reduce la separación vertical entre productos */
+        margin-bottom: 0.5rem; /* Reduce la separación vertical entre productos */
     }
 
     .product-item img {
         margin-bottom: -0.5rem;
     }
 
-    .main-section h1 {
-        font-size: 10vw; /* Ajusté el tamaño del título */
-        margin-bottom: -3.5rem; /* Espacio debajo del título */
-    }
-    
-    .main-section p {
-        font-size: 2vw; /* Ajusté el tamaño del título */
-        margin-bottom: 1rem; /* Espacio debajo del título */
-    }
-    
     .product-item p {
         font-size: 3.5vw; /* Ajusté el tamaño del título */
     }
