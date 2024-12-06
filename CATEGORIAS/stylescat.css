@@ -20,6 +20,7 @@
     grid-template-columns: repeat(5, 1fr); /* 6 columnas */
     gap: 1rem; /* Espacio entre los elementos */
     padding: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Ajustes para los productos */
@@ -37,14 +38,19 @@
     border-radius: 1rem;
     border: 2px solid #eeeeee;
     box-shadow: 0 1px 3px #0000003b;
+    margin-bottom: -1rem;
 }
 
 .product-item a {
-    font-size: 1.6vw; /* Ajusté el tamaño del título */
     color: #333;
     text-decoration: none;
     margin-top: 0.5rem;
 }
+
+.product-item p {
+    font-size: 1.6vw; /* Ajusté el tamaño del título */
+}
+
 /* Estilos del banner */
 .banner {
     width: 97%;
@@ -79,6 +85,29 @@
     .product-grid {
         grid-template-columns: repeat(2, 1fr); /* 2 columnas para móviles */
     }
+
+    .product-item {
+        margin-bottom: -2rem; /* Reduce la separación vertical entre productos */
+    }
+
+    .product-item img {
+        margin-bottom: -0.5rem;
+    }
+
+    .main-section h1 {
+        font-size: 10vw; /* Ajusté el tamaño del título */
+        margin-bottom: -3.5rem; /* Espacio debajo del título */
+    }
+    
+    .main-section p {
+        font-size: 2vw; /* Ajusté el tamaño del título */
+        margin-bottom: 1rem; /* Espacio debajo del título */
+    }
+    
+    .product-item p {
+        font-size: 3.5vw; /* Ajusté el tamaño del título */
+    }
+            
 }
 
 /* Estilos para tablets */
